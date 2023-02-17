@@ -411,7 +411,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f4756f27c5f6a142b8f09c510567a39, type: 3}
+  m_Script: {fileID: 11500000, guid: b61eddc426b06f84e8694609a36cd239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadCamara: 5
