@@ -18,7 +18,8 @@ public class ScriptObjeto : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        GameObject.FindGameObjectWithTag("gizmo").GetComponent<Gizmo>().transform.position = gameObject.transform.position;
-        GameObject.FindGameObjectWithTag("gizmo").GetComponent<Gizmo>().SetActivo(gameObject);
+        GameObject.FindGameObjectWithTag("gizmo").transform.position = gameObject.transform.position;
+        GameObject.FindGameObjectWithTag("helper").GetComponent <Gizmo>().SetActivo(gameObject);
+        
     }
 }

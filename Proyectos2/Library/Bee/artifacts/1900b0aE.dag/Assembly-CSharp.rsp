@@ -352,6 +352,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/Camara.cs"
 "Assets/Scripts/Gizmo.cs"
+"Assets/Scripts/GizmoRotacion.cs"
 "Assets/Scripts/Helper.cs"
 "Assets/Scripts/mover.cs"
 "Assets/Scripts/ScriptObjeto.cs"

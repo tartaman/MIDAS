@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Camara.cs" />
+    <Compile Include="Assets\Scripts\GizmoRotacion.cs" />
     <Compile Include="Assets\Scripts\Helper.cs" />
     <Compile Include="Assets\Scripts\ScriptObjeto.cs" />
     <Compile Include="Assets\Scripts\Gizmo.cs" />
