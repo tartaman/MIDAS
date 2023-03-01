@@ -24,21 +24,49 @@ public class Gizmo : MonoBehaviour
         {
             transformation = true;
             rotation = false;
+            gizmoTrans.SetActive(true);
+            gizmoRotation.SetActive(false);
+            if(seleccionado != null)
+            {
+                gizmoTrans.transform.position = seleccionado.transform.position;
+            }
+
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {
             rotation = true;
             transformation = false;
+            gizmoTrans.SetActive(false);
+            gizmoRotation.SetActive(true);
+            if(seleccionado != null)
+            {
+                gizmoRotation.transform.position = new Vector3(seleccionado.transform.position.x + 1.1f, seleccionado.transform.position.y, seleccionado.transform.position.z);
+                gizmoRotation.transform.rotation = seleccionado.transform.rotation;
+               
+            }
         }
         if (enMano && transformation)
         {
             seleccionado.transform.position = gizmoTrans.transform.position;
         }
+        else if(enMano && rotation)
+        {
+            seleccionado.transform.rotation = gizmoRotation.transform.rotation;
+        }
 
     }
-    public void SetActivo(GameObject objeto)
+      public void SetActivo(GameObject objeto)
     {
         seleccionado = objeto;
         enMano = true;
+    }
+    public char getState()
+    {
+        if (transformation)
+            return 't';
+        else
+        {
+            return 'r';
+        }
     }
 }

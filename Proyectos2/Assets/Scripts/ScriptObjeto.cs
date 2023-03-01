@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ScriptObjeto : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Gizmo gizmoController;
     void Start()
     {
-        
+        gizmoController = GameObject.FindGameObjectWithTag("helper").GetComponent<Gizmo>();
     }
 
     // Update is called once per frame
@@ -18,8 +18,17 @@ public class ScriptObjeto : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        GameObject.FindGameObjectWithTag("gizmo").transform.position = gameObject.transform.position;
-        GameObject.FindGameObjectWithTag("helper").GetComponent <Gizmo>().SetActivo(gameObject);
-        
+        gizmoController.SetActivo(gameObject);
+        if(gizmoController.getState() == 't')
+        {
+            GameObject.FindGameObjectWithTag("gizmo").transform.position = gameObject.transform.position;
+        }
+        else
+        {
+            GameObject.FindGameObjectWithTag("gizmoRotation").transform.position = new Vector3(transform.position.x + 1.1f, transform.position.y, transform.position.z);
+            GameObject.FindGameObjectWithTag("gizmoRotation").transform.rotation = transform.rotation;
+        }
+
+
     }
 }

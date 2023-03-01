@@ -28,7 +28,7 @@ public class GizmoRotacion : MonoBehaviour
             case 'x':
                 if (Camera.main.transform.rotation.eulerAngles.y < 315 && Camera.main.transform.rotation.eulerAngles.y >= 225)
                 {
-                    if(parte == 1)
+                    if (parte == 1)
                     {
                         gizmo.transform.Rotate(Vector3.right * 70 * Time.deltaTime * mouseY);
                     }
@@ -37,9 +37,27 @@ public class GizmoRotacion : MonoBehaviour
                         gizmo.transform.Rotate(Vector3.right * 70 * Time.deltaTime * -mouseY);
                     }
                 }
-                   
+                else if (Camera.main.transform.rotation.eulerAngles.y < 225 && Camera.main.transform.rotation.eulerAngles.y >= 135)
+                {
+                    gizmo.transform.Rotate(Vector3.right * 70 * Time.deltaTime * -mouseY);
+                }
+                else if (Camera.main.transform.rotation.eulerAngles.y < 135 && Camera.main.transform.rotation.eulerAngles.y >= 45)
+                {
+                    if (parte == 1)
+                    {
+                        gizmo.transform.Rotate(Vector3.right * 70 * Time.deltaTime * mouseY);
+                    }
+                    else
+                    {
+                        gizmo.transform.Rotate(Vector3.right * 70 * Time.deltaTime * -mouseY);
+                    }
+                }
+                else
+                {
+                    gizmo.transform.Rotate(Vector3.right * 70 * Time.deltaTime * mouseY);
+                }
                 break;
-
+                
 
             case 'z':
                 if (Camera.main.transform.rotation.eulerAngles.y < 315 && Camera.main.transform.rotation.eulerAngles.y >= 225)

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - gizmo
   - helper
+  - gizmoRotation
   layers:
   - Default
   - TransparentFX
