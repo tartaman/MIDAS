@@ -47,10 +47,10 @@ public class Gizmo : MonoBehaviour
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if(Physics.Raycast(ray, out hit))
                 {
-                    if(hit.collider == piso)
-                    {
-                        seleccionado.transform.position = Vector3.MoveTowards(seleccionado.transform.position, hit.point, Time.deltaTime * 5);
-                    }
+                    
+                        //seleccionado.transform.position = Vector3.MoveTowards(seleccionado.transform.position, hit.point, Time.deltaTime * 17);
+                        seleccionado.transform.position = new Vector3(hit.point.x, seleccionado.transform.position.y - piso.transform.position.y, hit.point.z);
+                    
                 }
             }
 
