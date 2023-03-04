@@ -4,62 +4,112 @@ using UnityEngine;
 
 public class Gizmo : MonoBehaviour
 {
+    //Por ahora todas estarán en public para que podamos checar como funcionan desde unity
+    [Header("Cosas relacionadas a Colocar objetos")]
+    public GameObject[] objetos;
+    public int selectedIndex;
+    public Collider piso;
+
+    private RaycastHit hit;
+    private Ray ray;
+
+    [Header("Comodin")]
     public GameObject seleccionado;
+
+    [Header("Cosas relacionadas a Gizmos")]
     public GameObject gizmoTrans;
     public GameObject gizmoRotation;
-    private bool enMano;
-    private bool transformation = true;
-    private bool rotation;
 
-    // Start is called before the first frame update
+    [Header("Bools")]
+    public bool enMano;
+    public bool transformation = true;
+    public bool rotation;
+    public bool arrastrando;
+
     void Start()
     {
-        
+        piso = GameObject.FindGameObjectWithTag("suelo").GetComponent<MeshCollider>();
     }
 
-    // Update is called once per frame
+  
     void Update()
     {
+        //si no esta intentando poner un objeto
+        if (!arrastrando)
+        {
+            Gizmos();
+        }
+        else
+        {
+            //Si está oprimiendo botón izquierdo y no lo suelta
+            if (Input.GetMouseButton(0))
+            {
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if(Physics.Raycast(ray, out hit))
+                {
+                    if(hit.collider == piso)
+                    {
+                        seleccionado.transform.position = Vector3.MoveTowards(seleccionado.transform.position, hit.point, Time.deltaTime * 5);
+                    }
+                }
+            }
+
+            //Si sielta el botón izquierdo del mouse
+        }
+
+
+    }
+
+    // Relacionado a el funcionamiento de guizmos
+    public void SetActivo(GameObject objeto)
+    {
+        seleccionado = objeto;
+        enMano = true;
+    }
+
+    private void Gizmos()
+    {
+        //Si oprime T el gizmo a usar es el de transfromación, quiza luego lo cambie a un botón que se active con mouse
+
         if (Input.GetKeyDown(KeyCode.T))
         {
             transformation = true;
             rotation = false;
             gizmoTrans.SetActive(true);
             gizmoRotation.SetActive(false);
-            if(seleccionado != null)
+            if (seleccionado != null)
             {
                 gizmoTrans.transform.position = seleccionado.transform.position;
             }
 
         }
+        //Si oprime R pus el rotar
         else if (Input.GetKeyDown(KeyCode.R))
         {
             rotation = true;
             transformation = false;
             gizmoTrans.SetActive(false);
             gizmoRotation.SetActive(true);
-            if(seleccionado != null)
+            if (seleccionado != null)
             {
                 gizmoRotation.transform.position = new Vector3(seleccionado.transform.position.x + 1.1f, seleccionado.transform.position.y, seleccionado.transform.position.z);
                 gizmoRotation.transform.rotation = seleccionado.transform.rotation;
-               
+
             }
         }
+        //toDO Falta agregar el gizmo de escala
+
+        //Esto es solo para adoptar los gizmos al mueble
         if (enMano && transformation)
         {
             seleccionado.transform.position = gizmoTrans.transform.position;
         }
-        else if(enMano && rotation)
+        else if (enMano && rotation)
         {
             seleccionado.transform.rotation = gizmoRotation.transform.rotation;
         }
+    }
 
-    }
-      public void SetActivo(GameObject objeto)
-    {
-        seleccionado = objeto;
-        enMano = true;
-    }
     public char getState()
     {
         if (transformation)
@@ -68,5 +118,14 @@ public class Gizmo : MonoBehaviour
         {
             return 'r';
         }
+    }
+
+    //Cosas relacionadas al funcionamiento de colocar objetos
+
+    //Los muebles llaman a esta función para que le den el index
+    public void setIndex(int index)
+    {
+        selectedIndex = index;
+        arrastrando = true;
     }
 }

@@ -1,26 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CuadroObjeto : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject[] muebles;
+    public GameObject enMano;
+    Vector3 mouse;
+    Ray mousePan;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    private void OnMouseDown()
-    {
-        Debug.Log("Pressed");
-    }
-    public void pressed()
-    {
-        Debug.Log("Pressed");
-    }
+    
 }

@@ -7,6 +7,7 @@ TagManager:
   - gizmo
   - helper
   - gizmoRotation
+  - suelo
   layers:
   - Default
   - TransparentFX
