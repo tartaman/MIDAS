@@ -30,11 +30,11 @@ public class GizmoRotacion : MonoBehaviour
                 {
                     if (parte == 1)
                     {
-                        gizmo.transform.Rotate(Vector3.right * 70 * Time.deltaTime * mouseY);
+                        gizmo.transform.Rotate(Vector3.right * 70 * Time.deltaTime * -mouseY);
                     }
                     else
                     {
-                        gizmo.transform.Rotate(Vector3.right * 70 * Time.deltaTime * -mouseY);
+                        gizmo.transform.Rotate(Vector3.right * 70 * Time.deltaTime * mouseY);
                     }
                 }
                 else if (Camera.main.transform.rotation.eulerAngles.y < 225 && Camera.main.transform.rotation.eulerAngles.y >= 135)

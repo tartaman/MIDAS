@@ -9,6 +9,7 @@ public class Gizmo : MonoBehaviour
     public GameObject[] objetos;
     public int selectedIndex;
     public Collider piso;
+    public float distance;
 
     private RaycastHit hit;
     private Ray ray;
@@ -44,16 +45,24 @@ public class Gizmo : MonoBehaviour
             //Si está oprimiendo botón izquierdo y no lo suelta
             if (Input.GetMouseButton(0))
             {
+                transformation = false;
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if(Physics.Raycast(ray, out hit))
                 {
-                    
+                    /*
+                     * 0 = posicion del objeto -su centro + su borde
+                     * posicion del objeto = su centro - su borde inferior
+                     */
+                    distance = seleccionado.GetComponent<Renderer>().bounds.center.y - seleccionado.GetComponent<Renderer>().bounds.min.y;
                         //seleccionado.transform.position = Vector3.MoveTowards(seleccionado.transform.position, hit.point, Time.deltaTime * 17);
-                        seleccionado.transform.position = new Vector3(hit.point.x, seleccionado.transform.position.y - piso.transform.position.y, hit.point.z);
+                    seleccionado.transform.position = new Vector3(hit.point.x, distance, hit.point.z);
                     
                 }
             }
-
+            if (Input.GetMouseButtonUp(0))
+            {
+                arrastrando = false;
+            }
             //Si sielta el botón izquierdo del mouse
         }
 
