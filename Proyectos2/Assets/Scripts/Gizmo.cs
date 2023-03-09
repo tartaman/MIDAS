@@ -45,19 +45,7 @@ public class Gizmo : MonoBehaviour
             //Si está oprimiendo botón izquierdo y no lo suelta
             if (Input.GetMouseButton(0))
             {
-                transformation = false;
-                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if(Physics.Raycast(ray, out hit))
-                {
-                    /*
-                     * 0 = posicion del objeto -su centro + su borde
-                     * posicion del objeto = su centro - su borde inferior
-                     */
-                    distance = seleccionado.GetComponent<Renderer>().bounds.center.y - seleccionado.GetComponent<Renderer>().bounds.min.y;
-                        //seleccionado.transform.position = Vector3.MoveTowards(seleccionado.transform.position, hit.point, Time.deltaTime * 17);
-                    seleccionado.transform.position = new Vector3(hit.point.x, distance, hit.point.z);
-                    
-                }
+                seleccionado.transform.position = setPosition();
             }
             if (Input.GetMouseButtonUp(0))
             {
@@ -136,5 +124,27 @@ public class Gizmo : MonoBehaviour
     {
         selectedIndex = index;
         arrastrando = true;
+        seleccionado = Instantiate(objetos[selectedIndex],setPosition(), new Quaternion(0,0,0,0));
+    }
+
+    Vector3 lastpos = new Vector3(999, 999, 999);
+    private Vector3 setPosition()
+    {
+        
+        transformation = false;
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit))
+        {
+            if(hit.collider == piso)
+            {
+                distance = seleccionado.GetComponent<Renderer>().bounds.center.y - seleccionado.GetComponent<Renderer>().bounds.min.y;
+                lastpos = new Vector3(hit.point.x, distance, hit.point.z);
+            }
+            /*
+             * 0 = posicion del objeto -su centro + su borde
+             * posicion del objeto = su centro - su borde inferior
+             */
+        }
+        return lastpos;
     }
 }

@@ -1,14 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class CuadroObjeto : MonoBehaviour
+public class CuadroObjeto : EventTrigger
 {
-    public void Dragging()
+    public int index;
+    
+
+    //Esta función se llama al oprimir el botón del mouse sobre el cuadro, llamará al script de Gizmo
+
+    public override void OnPointerDown(PointerEventData data)
     {
-        Debug.Log("AAAAAAAAAAAAA");
+        GameObject.FindGameObjectWithTag("helper").GetComponent<Gizmo>().setIndex(index);
     }
 
+
+
+    //Es una mausque herramienta que nos ayudará más tarde
+    public void setIndex(int index)
+    {
+        this.index = index;
+    }
    
+    
 }
