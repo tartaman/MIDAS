@@ -20,11 +20,13 @@ public class Gizmo : MonoBehaviour
     [Header("Cosas relacionadas a Gizmos")]
     public GameObject gizmoTrans;
     public GameObject gizmoRotation;
+    public char ejeR;
 
     [Header("Bools")]
     public bool enMano;
     public bool transformation = true;
     public bool rotation;
+    public bool rotando;
     public bool arrastrando;
 
     void Start()
@@ -50,6 +52,13 @@ public class Gizmo : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 arrastrando = false;
+                if(seleccionado.transform.position == new Vector3(999, 999, 999))
+                {
+                    Destroy(seleccionado);
+                    seleccionado = null;
+                }
+                
+                
             }
             //Si sielta el botón izquierdo del mouse
         }
@@ -101,9 +110,22 @@ public class Gizmo : MonoBehaviour
         {
             seleccionado.transform.position = gizmoTrans.transform.position;
         }
-        else if (enMano && rotation)
+        else if (enMano && rotation && rotando)
         {
-            seleccionado.transform.rotation = gizmoRotation.transform.rotation;
+            if(ejeR == 'x')
+            {
+                seleccionado.transform.localRotation *= Quaternion.Euler(gizmoRotation.transform.rotation.x,0,0);
+            }
+            else if (ejeR == 'z')
+            {
+                seleccionado.transform.localRotation *= Quaternion.Euler(0, 0, gizmoRotation.transform.rotation.z);
+            }
+            else if(ejeR == 'y')
+            {
+                seleccionado.transform.localRotation *= Quaternion.Euler(0, gizmoRotation.transform.rotation.y,0 );
+
+            }
+
         }
     }
 
@@ -146,5 +168,11 @@ public class Gizmo : MonoBehaviour
              */
         }
         return lastpos;
+    }
+
+    public void setRotando(bool rotation, char eje)
+    {
+        rotando = rotation;
+        ejeR = eje;
     }
 }

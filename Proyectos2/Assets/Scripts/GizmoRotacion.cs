@@ -9,9 +9,10 @@ public class GizmoRotacion : MonoBehaviour
     public GameObject gizmo;
     public char eje;
     public byte parte;
+    private Gizmo helper;
     void Start()
     {
-        
+        helper = GameObject.FindGameObjectWithTag("helper").GetComponent<Gizmo>();
     }
 
     // Update is called once per frame
@@ -56,6 +57,7 @@ public class GizmoRotacion : MonoBehaviour
                 {
                     gizmo.transform.Rotate(Vector3.right * 70 * Time.deltaTime * mouseY);
                 }
+                helper.setRotando(true,'x');
                 break;
                 
 
@@ -97,6 +99,7 @@ public class GizmoRotacion : MonoBehaviour
                     
                 }
                 Debug.Log(Camera.main.transform.rotation.eulerAngles.y);
+                helper.setRotando(true, 'z');
                 break;
 
             case 'y':
@@ -130,12 +133,22 @@ public class GizmoRotacion : MonoBehaviour
                 
                 */
 
-                gizmo.transform.Rotate(Vector3.up * -mouseX * Time.deltaTime * 70); 
+                gizmo.transform.Rotate(Vector3.up * -mouseX * Time.deltaTime * 70);
+                helper.setRotando(true,'y');
                 break;
 
             default:
                 break;
         }
+        
     }
+    private void OnMouseUp()
+    {
+        gizmo.transform.rotation = Quaternion.Euler(Vector3.zero);
+        helper.setRotando(false, 'q');
+    }
+
+    
+    
 }
     

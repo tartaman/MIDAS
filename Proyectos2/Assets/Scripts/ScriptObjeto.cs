@@ -26,7 +26,7 @@ public class ScriptObjeto : MonoBehaviour
         else
         {
             GameObject.FindGameObjectWithTag("gizmoRotation").transform.position = new Vector3(transform.position.x + 1.1f, transform.position.y, transform.position.z);
-            GameObject.FindGameObjectWithTag("gizmoRotation").transform.rotation = transform.rotation;
+            
         }
 
 
