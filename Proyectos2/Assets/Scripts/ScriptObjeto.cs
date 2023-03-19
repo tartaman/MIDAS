@@ -5,9 +5,11 @@ using UnityEngine;
 public class ScriptObjeto : MonoBehaviour
 {
     Gizmo gizmoController;
+    public int grupo;
     void Start()
     {
         gizmoController = GameObject.FindGameObjectWithTag("helper").GetComponent<Gizmo>();
+        
     }
 
     // Update is called once per frame
@@ -31,4 +33,6 @@ public class ScriptObjeto : MonoBehaviour
 
 
     }
+
+    public int getGrupo() => grupo;
 }

@@ -8,6 +8,7 @@ public class CuadroObjeto : EventTrigger
 {
     public int index;
     
+    
 
     //Esta función se llama al oprimir el botón del mouse sobre el cuadro, llamará al script de Gizmo
 
@@ -23,6 +24,10 @@ public class CuadroObjeto : EventTrigger
     {
         this.index = index;
     }
-   
+
+    public int getIndex()
+    {
+        return this.index;
+    }
     
 }

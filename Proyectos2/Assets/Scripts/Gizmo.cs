@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Gizmo : MonoBehaviour
@@ -7,6 +9,7 @@ public class Gizmo : MonoBehaviour
     //Por ahora todas estarán en public para que podamos checar como funcionan desde unity
     [Header("Cosas relacionadas a Colocar objetos")]
     public GameObject[] objetos;
+    public int[] grupos;
     public int selectedIndex;
     public Collider piso;
     public float distance;
@@ -22,16 +25,25 @@ public class Gizmo : MonoBehaviour
     public GameObject gizmoRotation;
     public char ejeR;
 
+    [Header("Cosas relacionadas a Botones")]
+    public GameObject contenido;
+    public GameObject cuadro;
+
     [Header("Bools")]
     public bool enMano;
     public bool transformation = true;
     public bool rotation;
     public bool rotando;
     public bool arrastrando;
+    private bool irregularChecked;
 
     void Start()
     {
         piso = GameObject.FindGameObjectWithTag("suelo").GetComponent<MeshCollider>();
+        
+        //GetGroupList();
+        objetos = MergeSort(objetos);
+
     }
 
   
@@ -57,8 +69,13 @@ public class Gizmo : MonoBehaviour
                     Destroy(seleccionado);
                     seleccionado = null;
                 }
+                else
+                {
+                    gizmoTrans.transform.position = seleccionado.transform.position;
+                    transformation = true;
+                }
                 
-                
+                irregularChecked = false;
             }
             //Si sielta el botón izquierdo del mouse
         }
@@ -99,7 +116,7 @@ public class Gizmo : MonoBehaviour
             if (seleccionado != null)
             {
                 gizmoRotation.transform.position = new Vector3(seleccionado.transform.position.x + 1.1f, seleccionado.transform.position.y, seleccionado.transform.position.z);
-                gizmoRotation.transform.rotation = seleccionado.transform.rotation;
+                
 
             }
         }
@@ -159,7 +176,23 @@ public class Gizmo : MonoBehaviour
         {
             if(hit.collider == piso)
             {
-                distance = seleccionado.GetComponent<Renderer>().bounds.center.y - seleccionado.GetComponent<Renderer>().bounds.min.y;
+                if(seleccionado.GetComponent<Collider>() == null && !irregularChecked)
+                {
+                    irregularChecked = true;
+                    var child = seleccionado.transform.GetChild(0);
+                    foreach(Transform hijo in child)
+                    {
+                        if(hijo.GetComponent<Collider>() != null)
+                        {
+                            distance = hijo.GetComponent<Collider>().bounds.center.y - hijo.GetComponent<Collider>().bounds.min.y;
+                        }
+                    }
+                }
+                else if(seleccionado.GetComponent<Collider>() != null)
+                {
+                    distance = seleccionado.GetComponent<Collider>().bounds.center.y - seleccionado.GetComponent<Collider>().bounds.min.y;
+                    
+                }
                 lastpos = new Vector3(hit.point.x, distance, hit.point.z);
             }
             /*
@@ -174,5 +207,138 @@ public class Gizmo : MonoBehaviour
     {
         rotando = rotation;
         ejeR = eje;
+    }
+
+    //Obtener arreglo de grupos
+    private void GetGroupList()
+    {
+        for(int i = 0; i < objetos.Length; i++)
+        {
+            grupos[i] = objetos[i].GetComponent<ScriptObjeto>().getGrupo();
+        }
+    }
+
+    
+
+    //Ordenar el arreglo dependiendo el grupo
+    private  GameObject[] MergeSort(GameObject[] Arr)
+    {
+        if (Arr.Length < 2)
+        {
+            return Arr;
+        }
+        else
+        {
+            int mitad = Arr.Length / 2;
+            GameObject[] izquierda = MergeSort(Arr.Take(mitad).ToArray());
+            GameObject[] derecha = MergeSort(Arr.Skip(mitad).ToArray());
+            return Merge(izquierda, derecha);
+        }
+    }
+    private  GameObject[] Merge(GameObject[] izq, GameObject[] der)
+    {
+        int i = 0;
+        int j = 0;
+        GameObject[] respuesta = { };
+        while (i < izq.Length && j < der.Length)
+        {
+            
+            if (izq[i].GetComponent<ScriptObjeto>().getGrupo() < der[j].GetComponent<ScriptObjeto>().getGrupo())
+            {
+                respuesta = respuesta.Append(izq[i]).ToArray();
+                
+                i++;
+            }
+            else
+            {
+                respuesta = respuesta.Append(der[j]).ToArray();
+                
+                j++;
+            }
+        }
+        respuesta = respuesta.Concat(izq.Skip(i)).ToArray();
+        respuesta = respuesta.Concat(der.Skip(j)).ToArray();
+        
+
+        return respuesta;
+    }
+
+    //Hallar rangos
+     private (int, int) BuscarLim(GameObject[] array, int x)
+    {
+        Debug.Log(x);
+        int pivote = binarySearch(array, 0, array.Length - 1, x);
+        Debug.Log(pivote);
+        int limInf = 0;
+        int limSup = array.Length - 1;
+        for (int i = pivote; i > 0; i--)
+        {
+            if (array[i].GetComponent<ScriptObjeto>().getGrupo() == x)
+            {
+                limInf = i;
+            }
+        }
+        for (int i = pivote; i < array.Length; i++)
+        {
+            if (array[i].GetComponent<ScriptObjeto>().getGrupo() == x)
+            {
+                limSup = i;
+            }
+        }
+        return (limInf, limSup);
+
+    }
+
+   private int binarySearch(GameObject[] array, int l, int h, int x)
+    {
+        int mid;
+        if (h >= 1)
+        {
+            while (l <= h)
+            {
+                mid = (l + h) / 2;
+                if (array[mid].GetComponent<ScriptObjeto>().getGrupo() == x)
+                {
+                    return mid;
+                }
+                else if (array[mid].GetComponent<ScriptObjeto>().getGrupo() < x)
+                {
+                    l = mid + 1;
+                }
+                else
+                {
+                    h = mid - 1;
+                }
+            }
+
+        }
+        return -1;
+    }
+
+    //cambio de botones
+    public void CambioBotones(int grupo)
+    {
+        Debug.Log("num" + grupo);
+        var limites = BuscarLim(objetos, grupo);
+        //transformar a for
+        /*
+        for (int i = 1; i <= contenido.transform.childCount; i++)
+        {
+
+            DestroyImmediate(contenido.transform.GetChild(i).gameObject);
+        }
+    ¨*/
+        foreach(Transform hijo in contenido.transform)
+        {
+            Destroy(hijo.gameObject);
+        }
+        Debug.Log(limites);
+        
+        for(int i = limites.Item1; i<= limites.Item2;i++)
+        {
+            Debug.Log(i);
+            Instantiate(cuadro, contenido.transform).GetComponent<CuadroObjeto>().setIndex(i);
+        }
+        
     }
 }
