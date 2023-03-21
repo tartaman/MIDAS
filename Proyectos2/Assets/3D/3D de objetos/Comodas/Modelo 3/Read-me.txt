@@ -1,0 +1,27 @@
+[En]
+
+Hi and thank you for downloading this model from Jetstorm_477 !
+
+> Model in 3 formats : .obj ; .sldprt ; .sh3d
+  3 skins proposed (A, B and C).
+  The SolidWorks model (.sldprt) is the original file from which I created the .obj model.
+  The .sh3d file is editable with the free Sweet Home 3D software, in order to change the color and the texture of different parts of furniture.
+
+  Do not hesitate to leave me a comment in case of problems or request format !
+
+enjoy ;)
+
+
+
+[Fr]
+
+Boujour et merci d'avoir téléchargé ce modèle de Jetstorm_477 !
+
+> Modèle joint en 3 formats : .obj ; .sldprt ; .sh3d
+  3 coloris proposés (A, B et C).
+  Le modèle SolidWorks (.sldprt) est le fichier original à partir duquel j'ai créé le modèle .obj.
+  Le fichier .sh3d est modifiable via le logiciel gratuit Sweet Home 3D pour ainsi changer la couleur et texture des différentes parties du meuble.
+
+  Ne pas hésiter à me laisser un commentaire en cas de problème ou de demande de format !
+
+a+ ;)
