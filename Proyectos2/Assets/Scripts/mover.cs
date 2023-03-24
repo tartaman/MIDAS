@@ -24,7 +24,7 @@ public class mover : MonoBehaviour
         switch (eje)
         {
             case 'x':
-
+                //uwu
                 if(Camera.main.transform.rotation.eulerAngles.y < 315 && Camera.main.transform.rotation.eulerAngles.y >= 225)
                 {
                     Debug.Log("2");

@@ -103,36 +103,7 @@ public class GizmoRotacion : MonoBehaviour
                 break;
 
             case 'y':
-                /*
-                if (Camera.main.transform.rotation.eulerAngles.y < 315 && Camera.main.transform.rotation.eulerAngles.y >= 225)
-                {
-                    
-                    gizmo.transform.Rotate(Vector3.up * -mouseX * Time.deltaTime * 70);
-                    Debug.Log("2");
-                    
-                }
-                else if (Camera.main.transform.rotation.eulerAngles.y < 225 && Camera.main.transform.rotation.eulerAngles.y >= 135)
-                {
-                    Debug.Log("3");
-                    gizmo.transform.Rotate(Vector3.up * -mouseX * Time.deltaTime * 70);
-                  
-                }
-                else if (Camera.main.transform.rotation.eulerAngles.y < 135 && Camera.main.transform.rotation.eulerAngles.y >= 45)
-                {
-
-                    gizmo.transform.Rotate(Vector3.up * mouseX * Time.deltaTime * 3);
-                }
-                else
-                {
-
-                    gizmo.transform.Rotate(Vector3.up * -mouseX * Time.deltaTime * 70);
-
-
-                }
-                Debug.Log(Camera.main.transform.rotation.eulerAngles.y);
-                
-                */
-
+             
                 gizmo.transform.Rotate(Vector3.up * -mouseX * Time.deltaTime * 70);
                 helper.setRotando(true,'y');
                 break;

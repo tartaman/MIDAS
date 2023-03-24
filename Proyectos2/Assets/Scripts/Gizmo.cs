@@ -1,8 +1,10 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Gizmo : MonoBehaviour
 {
@@ -37,11 +39,12 @@ public class Gizmo : MonoBehaviour
     public bool arrastrando;
     private bool irregularChecked;
 
+
+
     void Start()
     {
         piso = GameObject.FindGameObjectWithTag("suelo").GetComponent<MeshCollider>();
-        
-        //GetGroupList();
+        CambioBotones(1);
         objetos = MergeSort(objetos);
 
     }
@@ -195,10 +198,6 @@ public class Gizmo : MonoBehaviour
                 }
                 lastpos = new Vector3(hit.point.x, distance, hit.point.z);
             }
-            /*
-             * 0 = posicion del objeto -su centro + su borde
-             * posicion del objeto = su centro - su borde inferior
-             */
         }
         return lastpos;
     }
@@ -210,14 +209,7 @@ public class Gizmo : MonoBehaviour
     }
 
     //Obtener arreglo de grupos
-    private void GetGroupList()
-    {
-        for(int i = 0; i < objetos.Length; i++)
-        {
-            grupos[i] = objetos[i].GetComponent<ScriptObjeto>().getGrupo();
-        }
-    }
-
+  
     
 
     //Ordenar el arreglo dependiendo el grupo
@@ -271,7 +263,7 @@ public class Gizmo : MonoBehaviour
         Debug.Log(pivote);
         int limInf = 0;
         int limSup = array.Length - 1;
-        for (int i = pivote; i > 0; i--)
+        for (int i = pivote; i >= 0; i--)
         {
             if (array[i].GetComponent<ScriptObjeto>().getGrupo() == x)
             {
@@ -314,20 +306,12 @@ public class Gizmo : MonoBehaviour
         }
         return -1;
     }
-
+    
     //cambio de botones
     public void CambioBotones(int grupo)
     {
         Debug.Log("num" + grupo);
         var limites = BuscarLim(objetos, grupo);
-        //transformar a for
-        /*
-        for (int i = 1; i <= contenido.transform.childCount; i++)
-        {
-
-            DestroyImmediate(contenido.transform.GetChild(i).gameObject);
-        }
-    ¨*/
         foreach(Transform hijo in contenido.transform)
         {
             Destroy(hijo.gameObject);
@@ -336,9 +320,14 @@ public class Gizmo : MonoBehaviour
         
         for(int i = limites.Item1; i<= limites.Item2;i++)
         {
-            Debug.Log(i);
-            Instantiate(cuadro, contenido.transform).GetComponent<CuadroObjeto>().setIndex(i);
+
+            GameObject cuadrito = Instantiate(cuadro, contenido.transform);
+            cuadrito.GetComponent<CuadroObjeto>().setIndex(i);
+            cuadrito.transform.GetChild(0).GetComponent<Image>().sprite = objetos[i].GetComponent<ScriptObjeto>().GetImagen();
+            
         }
         
     }
+
+    
 }

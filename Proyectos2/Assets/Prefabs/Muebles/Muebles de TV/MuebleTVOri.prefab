@@ -60,7 +60,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb29d6b232864f6419881e614a45d4d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grupo: 1
+  preview: {fileID: 129239914, guid: 4a61b1ce6d0f4fc43b78e58fe61fb1e5, type: 3}
+  grupo: 7
 --- !u!23 &-7403932475429362879
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ScriptObjeto : MonoBehaviour
 {
     Gizmo gizmoController;
+    public Sprite preview;
     public int grupo;
     void Start()
     {
@@ -35,4 +37,5 @@ public class ScriptObjeto : MonoBehaviour
     }
 
     public int getGrupo() => grupo;
+    public Sprite GetImagen() => preview;
 }
