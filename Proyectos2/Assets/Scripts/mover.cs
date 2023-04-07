@@ -6,10 +6,11 @@ public class mover : MonoBehaviour
 {
     public char eje;
     public GameObject gizmo;
+    public ButtonUI manual;
     // Start is called before the first frame update
     void Start()
     {
-        
+        manual = GameObject.FindGameObjectWithTag("helper").gameObject.GetComponent<ButtonUI>();
     }
 
     // Update is called once per frame
@@ -76,7 +77,13 @@ public class mover : MonoBehaviour
                 break;
             default:
                 break;
+                
         }
+        if(manual.GetMode() == "mover")
+        {
+            manual.ChangeValues(gizmo.transform.position);
+        }
+        
     }
 
    

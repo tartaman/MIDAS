@@ -30,6 +30,7 @@ public class Gizmo : MonoBehaviour
     [Header("Cosas relacionadas a Botones")]
     public GameObject contenido;
     public GameObject cuadro;
+    public ButtonUI manual;
 
     [Header("Bools")]
     public bool enMano;
@@ -46,7 +47,7 @@ public class Gizmo : MonoBehaviour
         piso = GameObject.FindGameObjectWithTag("suelo").GetComponent<MeshCollider>();
         CambioBotones(1);
         objetos = MergeSort(objetos);
-
+        manual = GetComponent<ButtonUI>();
     }
 
   
@@ -64,6 +65,7 @@ public class Gizmo : MonoBehaviour
             {
                 seleccionado.transform.position = setPosition();
             }
+            //Si sielta el botón izquierdo del mouse
             if (Input.GetMouseButtonUp(0))
             {
                 arrastrando = false;
@@ -80,7 +82,7 @@ public class Gizmo : MonoBehaviour
                 
                 irregularChecked = false;
             }
-            //Si sielta el botón izquierdo del mouse
+            
         }
 
 
@@ -91,44 +93,36 @@ public class Gizmo : MonoBehaviour
     {
         seleccionado = objeto;
         enMano = true;
+        if(manual.GetMode() == "mover")
+        {
+            manual.ChangeValues(seleccionado.transform.position);
+        }
+        else if(manual.GetMode() == "rotar")
+        {
+            //manual.ChangeValues(seleccionado.transform.localRotation);
+            Debug.Log(seleccionado.transform.localEulerAngles);
+        }
+        
     }
+
+    public GameObject GetActivo()=> seleccionado;
 
     private void Gizmos()
     {
         //Si oprime T el gizmo a usar es el de transfromación, quiza luego lo cambie a un botón que se active con mouse
 
         if (Input.GetKeyDown(KeyCode.T))
-        {
-            transformation = true;
-            rotation = false;
-            gizmoTrans.SetActive(true);
-            gizmoRotation.SetActive(false);
-            if (seleccionado != null)
-            {
-                gizmoTrans.transform.position = seleccionado.transform.position;
-            }
-
-        }
+            ActivateTrans();
         //Si oprime R pus el rotar
         else if (Input.GetKeyDown(KeyCode.R))
-        {
-            rotation = true;
-            transformation = false;
-            gizmoTrans.SetActive(false);
-            gizmoRotation.SetActive(true);
-            if (seleccionado != null)
-            {
-                gizmoRotation.transform.position = new Vector3(seleccionado.transform.position.x + 1.1f, seleccionado.transform.position.y, seleccionado.transform.position.z);
-                
-
-            }
-        }
+            ActivateRot();
         //toDO Falta agregar el gizmo de escala
 
-        //Esto es solo para adoptar los gizmos al mueble
+        //Esto es solo para adaptar los gizmos al mueble
         if (enMano && transformation)
         {
             seleccionado.transform.position = gizmoTrans.transform.position;
+            
         }
         else if (enMano && rotation && rotando)
         {
@@ -148,6 +142,31 @@ public class Gizmo : MonoBehaviour
 
         }
     }
+
+    public void ActivateTrans()
+    {
+        transformation = true;
+        rotation = false;
+        gizmoTrans.SetActive(true);
+        gizmoRotation.SetActive(false);
+        if (seleccionado != null)
+        {
+            gizmoTrans.transform.position = seleccionado.transform.position;
+        }
+    }
+
+    public void ActivateRot()
+    {
+        rotation = true;
+        transformation = false;
+        gizmoTrans.SetActive(false);
+        gizmoRotation.SetActive(true);
+        if (seleccionado != null)
+        {
+            gizmoRotation.transform.position = new Vector3(seleccionado.transform.position.x + 1.1f, seleccionado.transform.position.y, seleccionado.transform.position.z);
+        }
+    }
+
 
     public char getState()
     {
@@ -208,7 +227,6 @@ public class Gizmo : MonoBehaviour
         ejeR = eje;
     }
 
-    //Obtener arreglo de grupos
   
     
 

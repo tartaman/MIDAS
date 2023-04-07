@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ScriptBotones : MonoBehaviour
 {
+    
     Gizmo helper;
     public int grupo = 1;
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class ScriptBotones : MonoBehaviour
     public void boton()
     {
         helper.CambioBotones(grupo);
+        
     }
 
 }

@@ -363,6 +363,7 @@
 "Assets/Scripts/Helper.cs"
 "Assets/Scripts/MenuGrande.cs"
 "Assets/Scripts/mover.cs"
+"Assets/Scripts/Mover1.cs"
 "Assets/Scripts/PreviewManager.cs"
 "Assets/Scripts/RoomEditor/CameraExpansion.cs"
 "Assets/Scripts/ScriptBotones.cs"

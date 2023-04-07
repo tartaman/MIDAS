@@ -10,9 +10,11 @@ public class GizmoRotacion : MonoBehaviour
     public char eje;
     public byte parte;
     private Gizmo helper;
+    private ButtonUI manual;
     void Start()
     {
         helper = GameObject.FindGameObjectWithTag("helper").GetComponent<Gizmo>();
+        manual = GameObject.FindGameObjectWithTag("helper").gameObject.GetComponent<ButtonUI>();
     }
 
     // Update is called once per frame
@@ -111,7 +113,10 @@ public class GizmoRotacion : MonoBehaviour
             default:
                 break;
         }
-        
+        if (manual.GetMode() == "rotar")
+        {
+            manual.ChangeValues(new Vector3 (helper.seleccionado.transform.localEulerAngles.x, helper.seleccionado.transform.localEulerAngles.y, helper.seleccionado.transform.localEulerAngles.z));
+        }
     }
     private void OnMouseUp()
     {
