@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.TerrainUtils;
 
 public class ColorPickerController : MonoBehaviour
 {
@@ -83,7 +84,9 @@ public class ColorPickerController : MonoBehaviour
             outputTexture.SetPixel(0, i, currentColor);
         }
         outputTexture.Apply();
-        changeThisColor.material.SetColor("_BaseColor", currentColor);
+        hexImputField.text = ColorUtility.ToHtmlStringRGB(currentColor);
+        changeThisColor.GetComponent<MeshRenderer>().material.color = currentColor;
+        //changeThisColor.material.SetColor("_BaseColor", currentColor);
     }
 
     public void SetSV(float S, float V)
@@ -103,6 +106,22 @@ public class ColorPickerController : MonoBehaviour
             }
         }
         svTexture.Apply();
+        UpdateOutputImage();
+    }
+
+    public void OnTextInput()
+    {
+        if(hexImputField.text.Length < 6)
+        {
+            return;
+        }
+        Color newCol;
+        if (ColorUtility.TryParseHtmlString("#" + hexImputField.text, out newCol))
+        {
+            Color.RGBToHSV(newCol, out currentHue, out currentSat, out currentVal);
+        }
+        hueSlider.value = currentHue;
+        hexImputField.text = "";
         UpdateOutputImage();
     }
 }
