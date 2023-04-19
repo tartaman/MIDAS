@@ -356,6 +356,8 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/ButtonUI.cs"
 "Assets/Scripts/Camara.cs"
+"Assets/Scripts/ColorPicker/ColorPickerController.cs"
+"Assets/Scripts/ColorPicker/ImageControl.cs"
 "Assets/Scripts/cuadricula.cs"
 "Assets/Scripts/CuadroObjeto.cs"
 "Assets/Scripts/Gizmo.cs"
