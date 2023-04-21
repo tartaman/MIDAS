@@ -13,7 +13,7 @@ public class Gizmo : MonoBehaviour
     [Header("Cosas relacionadas a Colocar objetos")]
     public GameObject[] objetos;
     public int[] grupos;
-    public int selectedIndex;
+    public int selectedIndex = -1;
     public Collider piso;
     public float distance;
 
@@ -39,7 +39,8 @@ public class Gizmo : MonoBehaviour
     public bool transformation = true;
     public bool rotation;
     public bool rotando;
-    public bool arrastrando;
+    [SerializeField] bool puedeArrastrar = true;
+    [SerializeField] bool arrastrando;
     private bool irregularChecked;
 
     [Header("Cosas relacionadas a Cambios de color")]
@@ -53,22 +54,26 @@ public class Gizmo : MonoBehaviour
 
     void Start()
     {
-        piso = GameObject.FindGameObjectWithTag("suelo").GetComponent<MeshCollider>();
+        puedeArrastrar = true;
+         selectedIndex = -1;
+         piso = GameObject.FindGameObjectWithTag("suelo").GetComponent<MeshCollider>();
         CambioBotones(1);
         objetos = MergeSort(objetos);
         manual = GetComponent<ButtonUI>();
         ColorPickerController = ColorPalette.GetComponent<ColorPickerController>();
     }
 
-  
-    void Update()
+
+    
+    void LateUpdate()
     {
         //si no esta intentando poner un objeto
         if (!arrastrando)
         {
             Gizmos();
         }
-        else
+        else if( arrastrando && puedeArrastrar && selectedIndex != -1)
+
         {
             //Si está oprimiendo botón izquierdo y no lo suelta
             if (Input.GetMouseButton(0))
@@ -79,7 +84,7 @@ public class Gizmo : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 arrastrando = false;
-                if(seleccionado.transform.position == new Vector3(999, 999, 999))
+                if (seleccionado.transform.position == new Vector3(999, 999, 999))
                 {
                     Destroy(seleccionado);
                     seleccionado = null;
@@ -89,38 +94,38 @@ public class Gizmo : MonoBehaviour
                     gizmoTrans.transform.position = seleccionado.transform.position;
                     transformation = true;
                 }
-                
-                irregularChecked = false;
-            }
-            
-        }
 
+                irregularChecked = false;
+                selectedIndex = -1;
+            }
+
+        }
 
     }
 
-    // Relacionado a el funcionamiento de guizmos
+    // Relacionado a el funcionamiento de gizmos
     public void SetActivo(GameObject objeto)
     {
         seleccionado = objeto;
         enMano = true;
         string mode = manual.GetMode();
-        
-        if(mode == "mover")
+
+        if (mode == "mover")
         {
             manual.ChangeValues(seleccionado.transform.position);
         }
-        else if(mode== "rotar")
+        else if (mode == "rotar")
         {
             manual.ChangeValues(seleccionado.transform.localEulerAngles);
         }
-        else if(mode == "color")
+        else if (mode == "color")
         {
             GetMeshes();
         }
-        
+
     }
 
-    public GameObject GetActivo()=> seleccionado;
+    public GameObject GetActivo() => seleccionado;
 
     private void Gizmos()
     {
@@ -137,21 +142,21 @@ public class Gizmo : MonoBehaviour
         if (enMano && transformation)
         {
             seleccionado.transform.position = gizmoTrans.transform.position;
-            
+
         }
         else if (enMano && rotation && rotando)
         {
-            if(ejeR == 'x')
+            if (ejeR == 'x')
             {
-                seleccionado.transform.localRotation *= Quaternion.Euler(gizmoRotation.transform.rotation.x,0,0);
+                seleccionado.transform.localRotation *= Quaternion.Euler(gizmoRotation.transform.rotation.x, 0, 0);
             }
             else if (ejeR == 'z')
             {
                 seleccionado.transform.localRotation *= Quaternion.Euler(0, 0, gizmoRotation.transform.rotation.z);
             }
-            else if(ejeR == 'y')
+            else if (ejeR == 'y')
             {
-                seleccionado.transform.localRotation *= Quaternion.Euler(0, gizmoRotation.transform.rotation.y,0 );
+                seleccionado.transform.localRotation *= Quaternion.Euler(0, gizmoRotation.transform.rotation.y, 0);
 
             }
 
@@ -198,42 +203,51 @@ public class Gizmo : MonoBehaviour
     //Los muebles llaman a esta función para que le den el index
     public void setIndex(int index)
     {
-        selectedIndex = index;
-        arrastrando = true;
-        seleccionado = Instantiate(objetos[selectedIndex],setPosition(), new Quaternion(0,0,0,0));
+        if (puedeArrastrar && index != -1)
+        {
+            selectedIndex = index;
+            arrastrando = true;
+            seleccionado = Instantiate(objetos[selectedIndex], setPosition(), new Quaternion(0, 0, 0, 0));
+        }
+        
     }
 
     Vector3 lastpos = new Vector3(999, 999, 999);
     private Vector3 setPosition()
     {
-        
+
         transformation = false;
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit))
         {
-            if(hit.collider == piso)
+            if (hit.collider == piso)
             {
-                if(seleccionado.GetComponent<Collider>() == null && !irregularChecked)
+                if (seleccionado.GetComponent<Collider>() == null && !irregularChecked)
                 {
                     irregularChecked = true;
                     var child = seleccionado.transform.GetChild(0);
-                    foreach(Transform hijo in child)
+                    foreach (Transform hijo in child)
                     {
-                        if(hijo.GetComponent<Collider>() != null)
+                        if (hijo.GetComponent<Collider>() != null)
                         {
                             distance = hijo.GetComponent<Collider>().bounds.center.y - hijo.GetComponent<Collider>().bounds.min.y;
                         }
                     }
                 }
-                else if(seleccionado.GetComponent<Collider>() != null)
+                else if (seleccionado.GetComponent<Collider>() != null)
                 {
                     distance = seleccionado.GetComponent<Collider>().bounds.center.y - seleccionado.GetComponent<Collider>().bounds.min.y;
-                    
+
                 }
                 lastpos = new Vector3(hit.point.x, distance, hit.point.z);
             }
         }
         return lastpos;
+    }
+
+    public void BloqDrag(bool state)
+    {
+        puedeArrastrar = state;
     }
 
     public void setRotando(bool rotation, char eje)
@@ -353,7 +367,8 @@ public class Gizmo : MonoBehaviour
         {
 
             GameObject cuadrito = Instantiate(cuadro, contenido.transform);
-            cuadrito.GetComponent<CuadroObjeto>().setIndex(i);
+            //cuadrito.GetComponent<CuadroObjeto>().setIndex(i);
+            cuadrito.GetComponent<BotonEvent>().setIndex(i);
             cuadrito.transform.GetChild(0).GetComponent<Image>().sprite = objetos[i].GetComponent<ScriptObjeto>().GetImagen();
             
         }

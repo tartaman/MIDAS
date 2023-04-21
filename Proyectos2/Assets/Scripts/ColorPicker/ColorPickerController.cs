@@ -18,6 +18,7 @@ public class ColorPickerController : MonoBehaviour
     [SerializeField] private ScriptObjeto objeto;
 
     [SerializeField] private MeshRenderer changeThisColor;
+    [SerializeField] private Gizmo helper;
 
     private void Start()
     {
@@ -31,6 +32,7 @@ public class ColorPickerController : MonoBehaviour
     {
         changeThisColor = Mesh;
     }
+    
 
     private void CreateHueImage()
     {

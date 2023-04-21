@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ImageControl : MonoBehaviour, IDragHandler, IPointerClickHandler
+public class ImageControl : MonoBehaviour, IDragHandler, IPointerClickHandler, IEndDragHandler
 {
     [SerializeField] private Image pickerImage;
     private RawImage SVimage;
     private ColorPickerController CC;
     private RectTransform rectTransform, pickerTransform;
-
+    [SerializeField] Gizmo helper;
     private void Awake()
     {
         SVimage = GetComponent<RawImage>();
@@ -55,11 +55,26 @@ public class ImageControl : MonoBehaviour, IDragHandler, IPointerClickHandler
     }
     public void OnDrag(PointerEventData eventData)
     {
+        helper.BloqDrag(false);
         UpdateColor(eventData);
+
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        helper.BloqDrag(false);
         UpdateColor(eventData);
+        
     }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        helper.BloqDrag(true);
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        helper.BloqDrag(true);
+    }
+
 }
