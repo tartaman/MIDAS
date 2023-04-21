@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,6 +33,7 @@ public class Gizmo : MonoBehaviour
     public GameObject cuadro;
     public ButtonUI manual;
 
+
     [Header("Bools")]
     public bool enMano;
     public bool transformation = true;
@@ -40,6 +42,13 @@ public class Gizmo : MonoBehaviour
     public bool arrastrando;
     private bool irregularChecked;
 
+    [Header("Cosas relacionadas a Cambios de color")]
+    [SerializeField] GameObject ColorShowButton;
+    [SerializeField] GameObject contenidoColor;
+    [SerializeField] GameObject ColorPalette;
+    [SerializeField] ColorPickerController ColorPickerController;
+    //private MeshRenderer[] meshes;
+    //[SerializeField] private List< MeshRenderer> Meshes;
 
 
     void Start()
@@ -48,6 +57,7 @@ public class Gizmo : MonoBehaviour
         CambioBotones(1);
         objetos = MergeSort(objetos);
         manual = GetComponent<ButtonUI>();
+        ColorPickerController = ColorPalette.GetComponent<ColorPickerController>();
     }
 
   
@@ -93,14 +103,19 @@ public class Gizmo : MonoBehaviour
     {
         seleccionado = objeto;
         enMano = true;
-        if(manual.GetMode() == "mover")
+        string mode = manual.GetMode();
+        
+        if(mode == "mover")
         {
             manual.ChangeValues(seleccionado.transform.position);
         }
-        else if(manual.GetMode() == "rotar")
+        else if(mode== "rotar")
         {
-            //manual.ChangeValues(seleccionado.transform.localRotation);
-            Debug.Log(seleccionado.transform.localEulerAngles);
+            manual.ChangeValues(seleccionado.transform.localEulerAngles);
+        }
+        else if(mode == "color")
+        {
+            GetMeshes();
         }
         
     }
@@ -227,8 +242,6 @@ public class Gizmo : MonoBehaviour
         ejeR = eje;
     }
 
-  
-    
 
     //Ordenar el arreglo dependiendo el grupo
     private  GameObject[] MergeSort(GameObject[] Arr)
@@ -297,10 +310,10 @@ public class Gizmo : MonoBehaviour
         }
         return (limInf, limSup);
 
-    }
+     }
 
    private int binarySearch(GameObject[] array, int l, int h, int x)
-    {
+   {
         int mid;
         if (h >= 1)
         {
@@ -323,7 +336,7 @@ public class Gizmo : MonoBehaviour
 
         }
         return -1;
-    }
+   }
     
     //cambio de botones
     public void CambioBotones(int grupo)
@@ -344,7 +357,36 @@ public class Gizmo : MonoBehaviour
             cuadrito.transform.GetChild(0).GetComponent<Image>().sprite = objetos[i].GetComponent<ScriptObjeto>().GetImagen();
             
         }
+    }
+
+    //cosas relacionadas al cambio de colores
+    public void GetMeshes()
+    {
         
+        foreach(Transform Botones in contenidoColor.transform)
+        {
+            Destroy(Botones.gameObject);
+        }
+
+        GameObject objetoInterno = seleccionado.transform.GetChild(0).gameObject;
+        //Meshes.Clear();
+        for (int i = 0; i < objetoInterno.transform.childCount; i++)
+        {
+            GameObject temp = Instantiate(ColorShowButton, contenidoColor.transform);
+            temp.name = i.ToString();
+            
+            temp.transform.Find("Texto").GetComponent<Text>().text = "Color " + (i +1);
+            temp.transform.Find("Color").GetComponent<Image>().color = objetoInterno.transform.GetChild(i).GetComponent<MeshRenderer>().material.color;
+            temp.GetComponent<ScripBotonColor>().SetMesh(objetoInterno.transform.GetChild(i).GetComponent<MeshRenderer>());
+            //Meshes.Add(objetoInterno.transform.GetChild(i).GetComponent<MeshRenderer>());
+        }
+    }
+
+    public void SetMeshCambio(MeshRenderer Mesh)
+    {
+        if(!ColorPalette.activeSelf)
+            ColorPalette.SetActive(true);
+        ColorPickerController.setMesh(Mesh);
     }
 
     

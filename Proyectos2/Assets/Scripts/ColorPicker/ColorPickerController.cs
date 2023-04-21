@@ -26,6 +26,12 @@ public class ColorPickerController : MonoBehaviour
         CreateOutputImage();
         UpdateOutputImage();
     }
+
+    public void setMesh(MeshRenderer Mesh)
+    {
+        changeThisColor = Mesh;
+    }
+
     private void CreateHueImage()
     {
         hueTexture = new Texture2D(1, 16);

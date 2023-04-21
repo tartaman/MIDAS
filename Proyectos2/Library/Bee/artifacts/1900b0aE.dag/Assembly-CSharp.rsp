@@ -358,6 +358,7 @@
 "Assets/Scripts/Camara.cs"
 "Assets/Scripts/ColorPicker/ColorPickerController.cs"
 "Assets/Scripts/ColorPicker/ImageControl.cs"
+"Assets/Scripts/ColorPicker/ScripBotonColor.cs"
 "Assets/Scripts/cuadricula.cs"
 "Assets/Scripts/CuadroObjeto.cs"
 "Assets/Scripts/Gizmo.cs"
