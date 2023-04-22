@@ -7,10 +7,15 @@ public class BotonEvent : MonoBehaviour
 {
     // Start is called before the first frame update
     public int index;
+    Gizmo helper;
+    private void Awake()
+    {
+        helper = GameObject.FindGameObjectWithTag("helper").GetComponent<Gizmo>();
+    }
 
     public void ChangeIndex()
     {
-        GameObject.FindGameObjectWithTag("helper").GetComponent<Gizmo>().setIndex(index);
+        helper.setIndex(index);
 
     }
 

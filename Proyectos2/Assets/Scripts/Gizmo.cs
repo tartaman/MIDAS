@@ -52,15 +52,19 @@ public class Gizmo : MonoBehaviour
     //[SerializeField] private List< MeshRenderer> Meshes;
 
 
-    void Start()
+    private void Awake()
     {
         puedeArrastrar = true;
-         selectedIndex = -1;
-         piso = GameObject.FindGameObjectWithTag("suelo").GetComponent<MeshCollider>();
-        CambioBotones(1);
+        selectedIndex = -1;
+        piso = GameObject.FindGameObjectWithTag("suelo").GetComponent<MeshCollider>();
         objetos = MergeSort(objetos);
+        CambioBotones(1);
         manual = GetComponent<ButtonUI>();
         ColorPickerController = ColorPalette.GetComponent<ColorPickerController>();
+    }
+    void Start()
+    {
+       
     }
 
 
@@ -72,7 +76,7 @@ public class Gizmo : MonoBehaviour
         {
             Gizmos();
         }
-        else if( arrastrando && puedeArrastrar && selectedIndex != -1)
+        else if( arrastrando && puedeArrastrar && seleccionado!= null)
 
         {
             //Si está oprimiendo botón izquierdo y no lo suelta
@@ -203,11 +207,14 @@ public class Gizmo : MonoBehaviour
     //Los muebles llaman a esta función para que le den el index
     public void setIndex(int index)
     {
-        if (puedeArrastrar && index != -1)
+        if (puedeArrastrar)
         {
+           
             selectedIndex = index;
-            arrastrando = true;
             seleccionado = Instantiate(objetos[selectedIndex], setPosition(), new Quaternion(0, 0, 0, 0));
+            arrastrando = true;
+            
+
         }
         
     }
@@ -222,7 +229,7 @@ public class Gizmo : MonoBehaviour
         {
             if (hit.collider == piso)
             {
-                if (seleccionado.GetComponent<Collider>() == null && !irregularChecked)
+                if (seleccionado.GetComponent<Collider>() == null && !irregularChecked && seleccionado.name != "Helper")
                 {
                     irregularChecked = true;
                     var child = seleccionado.transform.GetChild(0);

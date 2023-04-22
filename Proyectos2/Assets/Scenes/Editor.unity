@@ -3324,15 +3324,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.07876392, y: -0.0036566122, z: -0.00028890863, w: 0.99688655}
-  m_LocalPosition: {x: -24.47, y: 1.74, z: -4.92}
+  m_LocalRotation: {x: 0.105333745, y: -0, z: -0, w: 0.9944369}
+  m_LocalPosition: {x: -24.47, y: 2.2382681, z: -4.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1494489172}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 9.035, y: -0.426, z: -0.067}
+  m_LocalEulerAnglesHint: {x: 12.093, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5406,7 +5406,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1494489171}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.08, z: 0.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7681,7 +7681,7 @@ MonoBehaviour:
   selectedIndex: 0
   piso: {fileID: 0}
   distance: 0
-  seleccionado: {fileID: 0}
+  seleccionado: {fileID: 2044442761}
   gizmoTrans: {fileID: 1470866879}
   gizmoRotation: {fileID: 580559923}
   ejeR: 0
