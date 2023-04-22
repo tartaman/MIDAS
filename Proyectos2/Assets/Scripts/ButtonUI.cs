@@ -13,7 +13,9 @@ public class ButtonUI : MonoBehaviour
     private MenuGrande MenuGrande;
     [SerializeField]private GameObject menu;
     [SerializeField] private GameObject gizmoTrans;
+    [SerializeField] private GameObject aviso;
     string mode;
+
 
     bool mover;
     // Start is called before the first frame update
@@ -24,49 +26,50 @@ public class ButtonUI : MonoBehaviour
         
     }
 
-    private void Update()
-    {
-       
-    }
-    
-
     //Cambiar comodin
     public void Change(string mode)
     {
-        menu.transform.Find("Scroll").gameObject.SetActive(false);
-        if(mode != "color")
+        if(helper.GetActivo().gameObject.name != "Helper")
         {
-            menu.transform.Find("ChangeValues").gameObject.SetActive(true);
-            menu.transform.Find("ColorShowCase").gameObject.SetActive(false);
-            this.mode = mode;
-            if (mode == "mover")
+            menu.transform.Find("Scroll").gameObject.SetActive(false);
+            if(mode != "color")
             {
-                menu.transform.Find("ChangeValues/Texto").GetComponent<Text>().text = "Mover";
-                menu.transform.Find("ChangeValues/X").GetComponent<Text>().text = "Posición en X";
-                menu.transform.Find("ChangeValues/Y").GetComponent<Text>().text = "Posición en Y";
-                menu.transform.Find("ChangeValues/Z").GetComponent<Text>().text = "Posición en Z";
-                Vector3 objeto = GetComponent<Gizmo>().GetActivo().transform.position;
-                ChangeValues(objeto);
+                menu.transform.Find("ChangeValues").gameObject.SetActive(true);
+                menu.transform.Find("ColorShowCase").gameObject.SetActive(false);
+                this.mode = mode;
+                if (mode == "mover")
+                {
+                    menu.transform.Find("ChangeValues/Texto").GetComponent<Text>().text = "Mover";
+                    menu.transform.Find("ChangeValues/X").GetComponent<Text>().text = "Posición en X";
+                    menu.transform.Find("ChangeValues/Y").GetComponent<Text>().text = "Posición en Y";
+                    menu.transform.Find("ChangeValues/Z").GetComponent<Text>().text = "Posición en Z";
+                    Vector3 objeto = GetComponent<Gizmo>().GetActivo().transform.position;
+                    ChangeValues(objeto);
+                }
+                else if(mode == "rotar")
+                {
+                    menu.transform.Find("ChangeValues/Texto").GetComponent<Text>().text = "Rotar";
+                    menu.transform.Find("ChangeValues/X").GetComponent<Text>().text = "Rotación en X";
+                    menu.transform.Find("ChangeValues/Y").GetComponent<Text>().text = "Rotación en Y";
+                    menu.transform.Find("ChangeValues/Z").GetComponent<Text>().text = "Rotación en Z";
+                    Vector3 objeto = GetComponent<Gizmo>().GetActivo().transform.localEulerAngles;
+                    ChangeValues(objeto);
+                }
             }
-            else if(mode == "rotar")
+            else
             {
-                menu.transform.Find("ChangeValues/Texto").GetComponent<Text>().text = "Rotar";
-                menu.transform.Find("ChangeValues/X").GetComponent<Text>().text = "Rotación en X";
-                menu.transform.Find("ChangeValues/Y").GetComponent<Text>().text = "Rotación en Y";
-                menu.transform.Find("ChangeValues/Z").GetComponent<Text>().text = "Rotación en Z";
-                Vector3 objeto = GetComponent<Gizmo>().GetActivo().transform.localEulerAngles;
-                ChangeValues(objeto);
+                menu.transform.Find("ColorShowCase").gameObject.SetActive(true);
+                menu.transform.Find("ChangeValues").gameObject.SetActive(false);
+                this.mode = mode;
+                helper.GetMeshes();
             }
         }
         else
         {
-            menu.transform.Find("ColorShowCase").gameObject.SetActive(true);
-            menu.transform.Find("ChangeValues").gameObject.SetActive(false);
-            this.mode = mode;
-            helper.GetMeshes();
+            if (!aviso.activeSelf)
+                aviso.SetActive(true);
         }
-        
-        
+
     }
     //Relacionado al boton de mover
     public void ChangeValues(Vector3 objeto)

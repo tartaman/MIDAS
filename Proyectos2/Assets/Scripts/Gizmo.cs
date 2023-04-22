@@ -24,6 +24,8 @@ public class Gizmo : MonoBehaviour
     public GameObject seleccionado;
 
     [Header("Cosas relacionadas a Gizmos")]
+    [SerializeField] GameObject gizmoTransGO;
+    [SerializeField] GameObject gizmoRotGO;
     public GameObject gizmoTrans;
     public GameObject gizmoRotation;
     public char ejeR;
@@ -111,6 +113,22 @@ public class Gizmo : MonoBehaviour
     public void SetActivo(GameObject objeto)
     {
         seleccionado = objeto;
+
+        if (transformation)
+        {
+            gizmoTransGO.SetActive(true);
+            gizmoTrans.transform.position = objeto.transform.position;
+        }
+            
+
+        else if (rotation)
+        {
+            gizmoRotGO.SetActive(true);
+            gizmoRotation.transform.position = new Vector3(seleccionado.transform.position.x + 1.1f, seleccionado.transform.position.y, seleccionado.transform.position.z);
+
+        }
+
+
         enMano = true;
         string mode = manual.GetMode();
 

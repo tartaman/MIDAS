@@ -8,7 +8,6 @@ public class ScriptObjeto : MonoBehaviour
     Gizmo gizmoController;
     public Sprite preview;
     public int grupo;
-    private Vector3 rotacion;
     void Start()
     {
         gizmoController = GameObject.FindGameObjectWithTag("helper").GetComponent<Gizmo>();
@@ -25,8 +24,6 @@ public class ScriptObjeto : MonoBehaviour
     {
         gizmoController.SetActivo(gameObject);
         
-        GameObject.FindGameObjectWithTag("gizmo").transform.position = gameObject.transform.position;
-        GameObject.FindGameObjectWithTag("gizmoRotation").transform.position = new Vector3(transform.position.x + 1.1f, transform.position.y, transform.position.z);
     }
 
     public void setRotation(Vector3 rotacion)
