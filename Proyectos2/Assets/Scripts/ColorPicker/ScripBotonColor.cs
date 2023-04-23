@@ -7,8 +7,7 @@ public class ScripBotonColor : MonoBehaviour
     
     Gizmo helper;
     [SerializeField] MeshRenderer mesh;
-    MeshRenderer actual;
-    Color color;
+    [SerializeField] int num;
 
     void Start()
     {
@@ -23,14 +22,14 @@ public class ScripBotonColor : MonoBehaviour
         //actual.material.color = mesh.material.color;
     }
 
-    public void SetMesh(MeshRenderer meshE)
+    public void SetMesh(MeshRenderer meshE, int child)
     {
         mesh = meshE;
+        num = child;
     }
-
     public void SetInColor()
     {
-        helper.SetMeshCambio(mesh);
+        helper.SetMeshCambio(mesh,num);
     }
-    
+
 }

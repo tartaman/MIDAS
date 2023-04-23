@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 
-public class ScriptObjeto : MonoBehaviour
+public class ScriptObjeto : MonoBehaviour, IPointerClickHandler
 {
     Gizmo gizmoController;
     public Sprite preview;
@@ -14,17 +15,6 @@ public class ScriptObjeto : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-        
-    }
-    private void OnMouseDown()
-    {
-        gizmoController.SetActivo(gameObject);
-        
-    }
 
     public void setRotation(Vector3 rotacion)
     {
@@ -33,4 +23,9 @@ public class ScriptObjeto : MonoBehaviour
 
     public int getGrupo() => grupo;
     public Sprite GetImagen() => preview;
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        gizmoController.SetActivo(gameObject);
+    }
 }

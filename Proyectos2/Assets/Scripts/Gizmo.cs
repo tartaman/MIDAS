@@ -428,16 +428,16 @@ public class Gizmo : MonoBehaviour
             
             temp.transform.Find("Texto").GetComponent<Text>().text = "Color " + (i +1);
             temp.transform.Find("Color").GetComponent<Image>().color = objetoInterno.transform.GetChild(i).GetComponent<MeshRenderer>().material.color;
-            temp.GetComponent<ScripBotonColor>().SetMesh(objetoInterno.transform.GetChild(i).GetComponent<MeshRenderer>());
+            temp.GetComponent<ScripBotonColor>().SetMesh(objetoInterno.transform.GetChild(i).GetComponent<MeshRenderer>(), i);
             //Meshes.Add(objetoInterno.transform.GetChild(i).GetComponent<MeshRenderer>());
         }
     }
 
-    public void SetMeshCambio(MeshRenderer Mesh)
+    public void SetMeshCambio(MeshRenderer Mesh, int num)
     {
         if(!ColorPalette.activeSelf)
             ColorPalette.SetActive(true);
-        ColorPickerController.setMesh(Mesh);
+        ColorPickerController.setMesh(Mesh, num);
     }
 
     

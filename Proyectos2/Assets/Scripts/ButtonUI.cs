@@ -32,7 +32,7 @@ public class ButtonUI : MonoBehaviour
         if(helper.GetActivo().gameObject.name != "Helper")
         {
             menu.transform.Find("Scroll").gameObject.SetActive(false);
-            if(mode != "color")
+            if (mode != "color")
             {
                 menu.transform.Find("ChangeValues").gameObject.SetActive(true);
                 menu.transform.Find("ColorShowCase").gameObject.SetActive(false);
@@ -133,6 +133,7 @@ public class ButtonUI : MonoBehaviour
         {
             menu.transform.Find("Scroll").gameObject.SetActive(true);
             menu.transform.Find("ChangeValues").gameObject.SetActive(false);
+            menu.transform.Find("ColorShowCase").gameObject.SetActive(false);
         }
     }
 }

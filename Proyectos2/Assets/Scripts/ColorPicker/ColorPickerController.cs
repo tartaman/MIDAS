@@ -20,6 +20,10 @@ public class ColorPickerController : MonoBehaviour
     [SerializeField] private MeshRenderer changeThisColor;
     [SerializeField] private Gizmo helper;
 
+    [SerializeField] private int num;
+    [SerializeField] private GameObject container;
+    [SerializeField] private Color colorActual;
+
     private void Start()
     {
         CreateHueImage();
@@ -28,9 +32,11 @@ public class ColorPickerController : MonoBehaviour
         UpdateOutputImage();
     }
 
-    public void setMesh(MeshRenderer Mesh)
+    public void setMesh(MeshRenderer Mesh, int numChild)
     {
         changeThisColor = Mesh;
+        num = numChild;
+        colorActual = container.transform.GetChild(numChild).GetChild(1).GetComponent<Image>().color;
     }
     
 
@@ -94,6 +100,9 @@ public class ColorPickerController : MonoBehaviour
         outputTexture.Apply();
         hexImputField.text = ColorUtility.ToHtmlStringRGB(currentColor);
         changeThisColor.GetComponent<MeshRenderer>().material.color = currentColor;
+        colorActual = currentColor;
+        if(container.transform.childCount >0)
+            container.transform.GetChild(num).GetChild(1).GetComponent<Image>().color = colorActual;
         //changeThisColor.material.SetColor("_BaseColor", currentColor);
     }
 
