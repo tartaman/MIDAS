@@ -44,6 +44,7 @@ public class Gizmo : MonoBehaviour
     [SerializeField] bool puedeArrastrar = true;
     [SerializeField] bool arrastrando;
     private bool irregularChecked;
+    private bool tocado;
 
     [Header("Cosas relacionadas a Cambios de color")]
     [SerializeField] GameObject ColorShowButton;
@@ -98,37 +99,30 @@ public class Gizmo : MonoBehaviour
                 else
                 {
                     gizmoTrans.transform.position = seleccionado.transform.position;
-                    transformation = true;
+                    ActualGizmo();
                 }
 
                 irregularChecked = false;
                 selectedIndex = -1;
+
             }
 
         }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            gizmoTransGO.SetActive(false);
+            gizmoRotGO.SetActive(false);
 
+        }
+      
     }
 
     // Relacionado a el funcionamiento de gizmos
     public void SetActivo(GameObject objeto)
     {
+        
         seleccionado = objeto;
-
-        if (transformation)
-        {
-            gizmoTransGO.SetActive(true);
-            gizmoTrans.transform.position = objeto.transform.position;
-        }
-            
-
-        else if (rotation)
-        {
-            gizmoRotGO.SetActive(true);
-            gizmoRotation.transform.position = new Vector3(seleccionado.transform.position.x + 1.1f, seleccionado.transform.position.y, seleccionado.transform.position.z);
-
-        }
-
-
+        ActualGizmo();
         enMano = true;
         string mode = manual.GetMode();
 
@@ -144,10 +138,28 @@ public class Gizmo : MonoBehaviour
         {
             GetMeshes();
         }
-
+        
     }
 
     public GameObject GetActivo() => seleccionado;
+
+
+    private void ActualGizmo()
+    {
+        if (transformation)
+        {
+            gizmoTransGO.SetActive(true);
+            gizmoTrans.transform.position = seleccionado.transform.position;
+        }
+
+
+        else if (rotation)
+        {
+            gizmoRotGO.SetActive(true);
+            gizmoRotation.transform.position = new Vector3(seleccionado.transform.position.x + 1.1f, seleccionado.transform.position.y, seleccionado.transform.position.z);
+
+        }
+    }
 
     private void Gizmos()
     {
@@ -231,8 +243,6 @@ public class Gizmo : MonoBehaviour
             selectedIndex = index;
             seleccionado = Instantiate(objetos[selectedIndex], setPosition(), new Quaternion(0, 0, 0, 0));
             arrastrando = true;
-            
-
         }
         
     }
@@ -241,7 +251,8 @@ public class Gizmo : MonoBehaviour
     private Vector3 setPosition()
     {
 
-        transformation = false;
+        gizmoTransGO.SetActive(false);
+        gizmoRotGO.SetActive(false);
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit))
         {
@@ -430,4 +441,5 @@ public class Gizmo : MonoBehaviour
     }
 
     
+
 }

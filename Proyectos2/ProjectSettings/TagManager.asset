@@ -9,6 +9,7 @@ TagManager:
   - gizmoRotation
   - suelo
   - colorPicker
+  - Mueble
   layers:
   - Default
   - TransparentFX

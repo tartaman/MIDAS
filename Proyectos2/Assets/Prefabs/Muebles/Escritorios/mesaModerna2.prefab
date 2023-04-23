@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8758291221476311693}
   m_Layer: 0
   m_Name: mesaModerna2
-  m_TagString: Untagged
+  m_TagString: Mueble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

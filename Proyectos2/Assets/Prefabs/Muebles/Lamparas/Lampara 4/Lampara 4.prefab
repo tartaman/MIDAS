@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4095445416337454266}
   m_Layer: 0
   m_Name: Lampara 4
-  m_TagString: Untagged
+  m_TagString: Mueble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

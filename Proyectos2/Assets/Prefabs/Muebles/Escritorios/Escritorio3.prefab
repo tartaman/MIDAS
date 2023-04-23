@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1446817827265409269}
   m_Layer: 0
   m_Name: Escritorio3
-  m_TagString: Untagged
+  m_TagString: Mueble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
