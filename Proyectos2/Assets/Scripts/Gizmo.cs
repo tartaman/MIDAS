@@ -99,7 +99,9 @@ public class Gizmo : MonoBehaviour
                 else
                 {
                     gizmoTrans.transform.position = seleccionado.transform.position;
+                    enMano = true;
                     ActualGizmo();
+                    
                 }
 
                 irregularChecked = false;
