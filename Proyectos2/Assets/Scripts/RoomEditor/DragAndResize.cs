@@ -7,31 +7,43 @@ using UnityEngine.UIElements;
 [RequireComponent(typeof(Collider))]
 public class DragAndResize : MonoBehaviour
 {
-    public Transform WorldAnchor;
-    private Camera mainCamera;
-    private float CameraZdistance;
-    private Vector3 InitialScale;
+    Vector2 prevMousePosition;
+    private GameObject mainObject;
+    public float sizingFactor = 0.03f;
+    Vector3 minimumScale;
 
     private void Start()
     {
-        InitialScale = transform.localScale;
-        mainCamera = Camera.main;
-        CameraZdistance = mainCamera.WorldToScreenPoint(transform.position).z;
+        // Parsing the object we want to modify to mainObject
+        mainObject = GameObject.Find("Cube");
+        // Setting the minimum scale of the mainObject
+        minimumScale = new Vector3(1.0f, 1.0f, 1.0f);
     }
-    private void OnMouseDrag()
+
+    void OnMouseDrag()
     {
-       
-        Vector3 MouseScreenPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, CameraZdistance); 
-        Vector3 MouseWorldPosition = mainCamera.ScreenToWorldPoint(MouseScreenPosition); 
+        Vector2 mousePosition = Input.mousePosition;
 
-       
-        float distance = Vector2.Distance(WorldAnchor.position, MouseWorldPosition) ; 
-        transform.localScale = new Vector3(InitialScale.x, distance / 2f, InitialScale.z);
-        Vector2 middlePoint = (WorldAnchor.position + MouseWorldPosition) / 2; 
-        transform.position = middlePoint;
+        if (Input.GetMouseButton(0))
+        {
+            // Set this object's position to where the mouse is being held down by the left click.
+            transform.position = Camera.main.ScreenToWorldPoint(mousePosition);
 
-        Vector3 rotationDirection = (MouseWorldPosition - WorldAnchor.position); //Change Rotation
-        transform.up = rotationDirection;
+            // Change the scale of mainObject by comparing previous frame mousePosition with this frame's position, modified by sizingFactor.
+            Vector3 scale = mainObject.transform.localScale;
+            scale.x = scale.x + (mousePosition.x - prevMousePosition.x) * sizingFactor;
+            scale.y = scale.x;
+            scale.z = scale.x;
+            mainObject.transform.localScale = scale;
 
+            // Checking if current scale is less than minimumScale, if yes, mainObject scales takes value from minimumScale
+            if (scale.x < minimumScale.x)
+            {
+                mainObject.transform.localScale = minimumScale;
+            }
+        }
+
+        prevMousePosition = mousePosition;
     }
 }
+  

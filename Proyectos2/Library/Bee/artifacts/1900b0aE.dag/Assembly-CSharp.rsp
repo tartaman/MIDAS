@@ -371,6 +371,7 @@
 "Assets/Scripts/RoomEditor/CameraExpansion.cs"
 "Assets/Scripts/RoomEditor/DragAndResize.cs"
 "Assets/Scripts/RoomEditor/GuardarCuarto.cs"
+"Assets/Scripts/ScaleGizmo.cs"
 "Assets/Scripts/ScriptBotones.cs"
 "Assets/Scripts/ScriptObjeto.cs"
 "Assets/Scripts/UI/BotonEvent.cs"
