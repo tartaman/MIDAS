@@ -26,6 +26,7 @@ public class Gizmo : MonoBehaviour
     [Header("Cosas relacionadas a Gizmos")]
     [SerializeField] GameObject gizmoTransGO;
     [SerializeField] GameObject gizmoRotGO;
+    [SerializeField] GameObject gizmoEscala;
     public GameObject gizmoTrans;
     public GameObject gizmoRotation;
     public char ejeR;
@@ -41,6 +42,7 @@ public class Gizmo : MonoBehaviour
     public bool transformation = true;
     public bool rotation;
     public bool rotando;
+    public bool escala;
     [SerializeField] bool puedeArrastrar = true;
     [SerializeField] bool arrastrando;
     private bool irregularChecked;
@@ -114,6 +116,7 @@ public class Gizmo : MonoBehaviour
         {
             gizmoTransGO.SetActive(false);
             gizmoRotGO.SetActive(false);
+            gizmoEscala.SetActive(false);
 
         }
       
@@ -153,15 +156,21 @@ public class Gizmo : MonoBehaviour
             gizmoTransGO.SetActive(true);
             gizmoTrans.transform.position = seleccionado.transform.position;
         }
-
-
         else if (rotation)
         {
             gizmoRotGO.SetActive(true);
             gizmoRotation.transform.position = new Vector3(seleccionado.transform.position.x + 1.1f, seleccionado.transform.position.y, seleccionado.transform.position.z);
 
         }
+        else if (escala)
+        {
+            gizmoEscala.SetActive(true);
+            gizmoEscala.transform.position = seleccionado.transform.position;
+            DesignarEscala();
+
+        }
     }
+
 
     private void Gizmos()
     {
@@ -172,6 +181,11 @@ public class Gizmo : MonoBehaviour
         //Si oprime R pus el rotar
         else if (Input.GetKeyDown(KeyCode.R))
             ActivateRot();
+        else if (Input.GetKeyDown(KeyCode.E))
+        {
+            ActivateEsc();
+            DesignarEscala();
+        }
         //toDO Falta agregar el gizmo de escala
 
         //Esto es solo para adaptar los gizmos al mueble
@@ -203,8 +217,10 @@ public class Gizmo : MonoBehaviour
     {
         transformation = true;
         rotation = false;
+        escala = false;
         gizmoTrans.SetActive(true);
         gizmoRotation.SetActive(false);
+        gizmoEscala.SetActive(false);
         if (seleccionado != null)
         {
             gizmoTrans.transform.position = seleccionado.transform.position;
@@ -215,11 +231,27 @@ public class Gizmo : MonoBehaviour
     {
         rotation = true;
         transformation = false;
+        escala = false;
         gizmoTrans.SetActive(false);
         gizmoRotation.SetActive(true);
+        gizmoEscala.SetActive(false);
         if (seleccionado != null)
         {
             gizmoRotation.transform.position = new Vector3(seleccionado.transform.position.x + 1.1f, seleccionado.transform.position.y, seleccionado.transform.position.z);
+        }
+    }
+
+    public void ActivateEsc()
+    {
+        escala = true;
+        rotation = false;
+        transformation = false;
+        gizmoTrans.SetActive(false);
+        gizmoRotation.SetActive(false);
+        gizmoEscala.SetActive(true);
+        if (seleccionado != null)
+        {
+            gizmoEscala.transform.position = seleccionado.transform.position;
         }
     }
 
@@ -228,11 +260,24 @@ public class Gizmo : MonoBehaviour
     {
         if (transformation)
             return 't';
-        else
+        else if(rotation)
         {
             return 'r';
         }
+        else
+        {
+            return 'e';
+        }
     }
+
+    private void DesignarEscala()
+    {
+        gizmoEscala.GetComponent<ScaleGizmo>().SetSeleccionado(seleccionado);
+        foreach(Transform t in gizmoEscala.transform)
+        {
+            t.gameObject.transform.GetChild(0).GetComponent<ScaleGizmo>().SetSeleccionado(seleccionado);
+        }
+    } 
 
     //Cosas relacionadas al funcionamiento de colocar objetos
 

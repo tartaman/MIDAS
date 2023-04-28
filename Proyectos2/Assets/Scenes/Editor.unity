@@ -3481,7 +3481,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.105333745, y: -0, z: -0, w: 0.9944369}
-  m_LocalPosition: {x: 1.15, y: 1.4, z: -4.56}
+  m_LocalPosition: {x: -23.79, y: 1.4, z: -6.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8092,6 +8092,7 @@ MonoBehaviour:
   seleccionado: {fileID: 2044442761}
   gizmoTransGO: {fileID: 1470866879}
   gizmoRotGO: {fileID: 580559923}
+  gizmoEscala: {fileID: 343125319}
   gizmoTrans: {fileID: 1470866879}
   gizmoRotation: {fileID: 580559923}
   ejeR: 0
@@ -8102,6 +8103,7 @@ MonoBehaviour:
   transformation: 1
   rotation: 0
   rotando: 0
+  escala: 0
   puedeArrastrar: 0
   arrastrando: 0
   ColorShowButton: {fileID: 4137745858937780866, guid: 11dcc2ffbf964c84d8e69b1bcde00060, type: 3}
