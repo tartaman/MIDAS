@@ -74,10 +74,19 @@ public class ButtonUI : MonoBehaviour
     //Relacionado al boton de mover
     public void ChangeValues(Vector3 objeto)
     {
+        if(mode == "rotar")
+        {
+            menu.transform.Find("ChangeValues/X/InputField").GetComponent<InputField>().text = objeto.y.ToString();
+            menu.transform.Find("ChangeValues/Y/InputField").GetComponent<InputField>().text = objeto.x.ToString();
+            menu.transform.Find("ChangeValues/Z/InputField").GetComponent<InputField>().text = objeto.z.ToString();
+        }
+        else if( mode == "mover")
+        {
+            menu.transform.Find("ChangeValues/X/InputField").GetComponent<InputField>().text = objeto.x.ToString();
+            menu.transform.Find("ChangeValues/Y/InputField").GetComponent<InputField>().text = objeto.y.ToString();
+            menu.transform.Find("ChangeValues/Z/InputField").GetComponent<InputField>().text = objeto.z.ToString();
+        }
         
-        menu.transform.Find("ChangeValues/X/InputField").GetComponent<InputField>().text = objeto.y.ToString();
-        menu.transform.Find("ChangeValues/Y/InputField").GetComponent<InputField>().text = objeto.x.ToString();
-        menu.transform.Find("ChangeValues/Z/InputField").GetComponent<InputField>().text = objeto.z.ToString();
     }
 
     public void InputMover(string eje)
@@ -87,13 +96,13 @@ public class ButtonUI : MonoBehaviour
             switch (eje)
             {
                 case "X":
-                    gizmoTrans.transform.position = new Vector3(int.Parse(menu.transform.Find("ChangeValues/X/InputField").GetComponent<InputField>().text), helper.GetActivo().gameObject.transform.position.y, helper.GetActivo().gameObject.transform.position.z);
+                    gizmoTrans.transform.position = new Vector3(float.Parse(menu.transform.Find("ChangeValues/X/InputField").GetComponent<InputField>().text), helper.GetActivo().gameObject.transform.position.y, helper.GetActivo().gameObject.transform.position.z);
                     break;
                 case "Y":
-                    gizmoTrans.transform.position = new Vector3(helper.GetActivo().gameObject.transform.position.x, int.Parse(menu.transform.Find("ChangeValues/Y/InputField").GetComponent<InputField>().text), helper.GetActivo().gameObject.transform.position.z);
+                    gizmoTrans.transform.position = new Vector3(helper.GetActivo().gameObject.transform.position.x, float.Parse(menu.transform.Find("ChangeValues/Y/InputField").GetComponent<InputField>().text), helper.GetActivo().gameObject.transform.position.z);
                     break;
                 case "Z":
-                    gizmoTrans.transform.position = new Vector3(helper.GetActivo().gameObject.transform.position.x, helper.GetActivo().gameObject.transform.position.y, int.Parse(menu.transform.Find("ChangeValues/Z/InputField").GetComponent<InputField>().text));
+                    gizmoTrans.transform.position = new Vector3(helper.GetActivo().gameObject.transform.position.x, helper.GetActivo().gameObject.transform.position.y, float.Parse(menu.transform.Find("ChangeValues/Z/InputField").GetComponent<InputField>().text));
                     break;
                 default:
                     break;

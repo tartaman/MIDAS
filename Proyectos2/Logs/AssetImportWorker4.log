@@ -1,0 +1,501 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.23f1 (213b516bf396) revision 2177873'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22000) 64bit Professional' Language: 'es' Physical Memory: 15741 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.23f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker4
+-projectPath
+C:/Users/Dell/Documents/GitHub/MIDAS/Proyectos2
+-logFile
+Logs/AssetImportWorker4.log
+-srvPort
+61288
+Successfully changed project path to: C:/Users/Dell/Documents/GitHub/MIDAS/Proyectos2
+C:/Users/Dell/Documents/GitHub/MIDAS/Proyectos2
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [9152] Host "[IP] 192.168.80.1 [Port] 0 [Flags] 2 [Guid] 4236004001 [EditorId] 4236004001 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-KL0MDJR) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [9152] Host "[IP] 192.168.80.1 [Port] 0 [Flags] 2 [Guid] 4236004001 [EditorId] 4236004001 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-KL0MDJR) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Assets/3D/3D de objetos/Comodas/Modelo 4/curveddresser.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+Assets/Prefabs/Muebles/Lamparas/Lampara 3/Polyester Masa Lambası-Free3D.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+Refreshing native plugins compatible for Editor in 91.93 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.23f1 (213b516bf396)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.23f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Dell/Documents/GitHub/MIDAS/Proyectos2/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon(TM) Graphics (ID=0x1636)
+    Vendor:   ATI
+    VRAM:     7870 MB
+    Driver:   31.0.12019.15004
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.23f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.23f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.23f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56480
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.23f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004289 seconds.
+Native extension for WindowsStandalone target not found
+Assets/3D/3D de objetos/Comodas/Modelo 4/curveddresser.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+Assets/Prefabs/Muebles/Lamparas/Lampara 3/Polyester Masa Lambası-Free3D.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+Refreshing native plugins compatible for Editor in 87.17 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.640 seconds
+Domain Reload Profiling:
+	ReloadAssembly (640ms)
+		BeginReloadAssembly (86ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (460ms)
+			LoadAssemblies (84ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (108ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (30ms)
+			SetupLoadedEditorAssemblies (269ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (87ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (126ms)
+				ProcessInitializeOnLoadMethodAttributes (47ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.004719 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Dell\Documents\GitHub\MIDAS\Proyectos2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Dell\Documents\GitHub\MIDAS\Proyectos2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.081 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1082ms)
+		BeginReloadAssembly (129ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (24ms)
+		EndReloadAssembly (838ms)
+			LoadAssemblies (92ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (270ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (59ms)
+			SetupLoadedEditorAssemblies (385ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (95ms)
+				ProcessInitializeOnLoadAttributes (258ms)
+				ProcessInitializeOnLoadMethodAttributes (19ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Assets/3D/3D de objetos/Comodas/Modelo 4/curveddresser.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+Assets/Prefabs/Muebles/Lamparas/Lampara 3/Polyester Masa Lambası-Free3D.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+========================================================================
+Worker process is ready to serve import requests
+Assets/3D/3D de objetos/Comodas/Modelo 4/curveddresser.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+Assets/Prefabs/Muebles/Lamparas/Lampara 3/Polyester Masa Lambası-Free3D.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.65 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3295 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (113.5 KB). Loaded Objects now: 3755.
+Memory consumption went from 117.6 MB to 117.5 MB.
+Total: 3.386100 ms (FindLiveObjects: 0.426200 ms CreateObjectMapping: 0.199500 ms MarkObjects: 2.629300 ms  DeleteObjects: 0.128900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 22299.538003 seconds.
+  path: Assets/Imágenes/Materials/22-223545_pared-con-figuras-geometricas.mat
+  artifactKey: Guid(c921c018830d6c2499df6ba251bb32bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imágenes/Materials/22-223545_pared-con-figuras-geometricas.mat using Guid(c921c018830d6c2499df6ba251bb32bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c088aacf61f0a1890bc8320dbf705ca8') in 0.196763 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/3D/3D de objetos/Comodas/Modelo 1/eb_dresser_01/eb_dresser_01.obj
+  artifactKey: Guid(98853c2b11144264a883d79caa55fb83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3D/3D de objetos/Comodas/Modelo 1/eb_dresser_01/eb_dresser_01.obj using Guid(98853c2b11144264a883d79caa55fb83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '773f2d489fb6e274c988d819fb480960') in 0.153047 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/3D/3D de gizmos/gizmo2/tinker.obj
+  artifactKey: Guid(47fbdfd9b2327ad488043213071140ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3D/3D de gizmos/gizmo2/tinker.obj using Guid(47fbdfd9b2327ad488043213071140ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f36829bc6deaf23550a530e698cc26f5') in 0.061191 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/3D/3D de objetos/Sillas/Oriental/tinker.obj
+  artifactKey: Guid(1c91feab41dacd44da38eac30e7f7da1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3D/3D de objetos/Sillas/Oriental/tinker.obj using Guid(1c91feab41dacd44da38eac30e7f7da1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecf78b6130dd6943d7d515cf001a4fd4') in 0.067874 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/3D/3D de objetos/Literas/Contemporanea/tinker.obj
+  artifactKey: Guid(1b8d3276e86def94d8f280ac5bb6629c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3D/3D de objetos/Literas/Contemporanea/tinker.obj using Guid(1b8d3276e86def94d8f280ac5bb6629c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '391e9d51ad329f8e848ef47bfc7b5079') in 0.060145 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Prefabs/Muebles/Lamparas/Lampara 3/Polyester Masa Lambası-Free3D.obj
+  artifactKey: Guid(b17529df642a6cd4f9de722722fbc941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Muebles/Lamparas/Lampara 3/Polyester Masa Lambası-Free3D.obj using Guid(b17529df642a6cd4f9de722722fbc941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbaaa79d610ad59d0620c7a2acd974e2') in 0.058634 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/3D/3D de objetos/Escritorios/Esc5/tinker.obj
+  artifactKey: Guid(4787cc335613bc74691edcdebf0f4368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3D/3D de objetos/Escritorios/Esc5/tinker.obj using Guid(4787cc335613bc74691edcdebf0f4368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2168633dbcfb1a26b0abb6a5daab0549') in 0.088917 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/3D/3D de objetos/Otomana/Otomana3/tinker.obj
+  artifactKey: Guid(8dd0a8dcf51bfc64cba9621db2db4792) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3D/3D de objetos/Otomana/Otomana3/tinker.obj using Guid(8dd0a8dcf51bfc64cba9621db2db4792) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19f514e40775efa58036e22c9400f0de') in 0.062372 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/3D/3D de gizmos/gizmo3/tinker.obj
+  artifactKey: Guid(c5541455ef593374eb7a8da937dce22a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3D/3D de gizmos/gizmo3/tinker.obj using Guid(c5541455ef593374eb7a8da937dce22a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c29996126e278fd749f88a9cbcac4f4') in 0.035019 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/3D/3D de objetos/Camas/Oriental/tinker.obj
+  artifactKey: Guid(01d062b7b3e3cb54d941c2862c78ef15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3D/3D de objetos/Camas/Oriental/tinker.obj using Guid(01d062b7b3e3cb54d941c2862c78ef15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab04551f5e34c59044fff97710174a85') in 0.098757 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF Glow.mat
+  artifactKey: Guid(d75b8f41e959450c84ac6e967084d3e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF Glow.mat using Guid(d75b8f41e959450c84ac6e967084d3e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1ce4fec60cd03049bd387e3835b017c') in 0.123625 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/3D/3D de objetos/Escritorios/Esc2/tinker.obj
+  artifactKey: Guid(2b03395dcc6d28641856dfaec5fd49e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3D/3D de objetos/Escritorios/Esc2/tinker.obj using Guid(2b03395dcc6d28641856dfaec5fd49e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73966940530e8162220b08e606b91b2d') in 0.060472 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/3D/3D de objetos/Otomana/Otomana1/tinker.obj
+  artifactKey: Guid(59a5432056f20b34396187d97ec80fc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3D/3D de objetos/Otomana/Otomana1/tinker.obj using Guid(59a5432056f20b34396187d97ec80fc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44e2df3bb48704827b8a32c34145cb0d') in 0.057002 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF Logo.mat
+  artifactKey: Guid(f4e195ac1e204eff960149d1cb34e18c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF Logo.mat using Guid(f4e195ac1e204eff960149d1cb34e18c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d1105baa6d108590bb5d7522c4e571f') in 0.359884 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/3D/3D de objetos/Literas/Moderna/tinker.obj
+  artifactKey: Guid(b84b1520de602854ab98c887cb432842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3D/3D de objetos/Literas/Moderna/tinker.obj using Guid(b84b1520de602854ab98c887cb432842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de1965ca4abd5edd8eb69daa0732da20') in 0.064496 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/3D/3D de gizmos/rotationGizmo/tinker.obj
+  artifactKey: Guid(f31340f2b3248184ebdce1ba6a7108dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3D/3D de gizmos/rotationGizmo/tinker.obj using Guid(f31340f2b3248184ebdce1ba6a7108dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5879aecfedfa9273be36181531af771') in 0.042226 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/3D/3D de objetos/Otomana/Otomana2/tinker.obj
+  artifactKey: Guid(e0155b957698a394ea7a88d7ef741176) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3D/3D de objetos/Otomana/Otomana2/tinker.obj using Guid(e0155b957698a394ea7a88d7ef741176) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b65cdb57e4f29710692184a985cefed7') in 0.080188 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/3D/3D de objetos/Espejos/Espejo 2/tinker.obj
+  artifactKey: Guid(b0f605a6e4d73774e92d2db7e0e94570) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3D/3D de objetos/Espejos/Espejo 2/tinker.obj using Guid(b0f605a6e4d73774e92d2db7e0e94570) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27cab7fd77e199bd13a0ca40d3e9ea83') in 0.081496 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 71.773962 seconds.
+  path: Assets/3D/3D de gizmos/PRINCIPALOFFICEdemoscene.fbx
+  artifactKey: Guid(994ade30e0665a845acf73e0a892ff9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3D/3D de gizmos/PRINCIPALOFFICEdemoscene.fbx using Guid(994ade30e0665a845acf73e0a892ff9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21fbddcd5c6b14fd831765bb6abf8696') in 0.355681 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 24.696525 seconds.
+  path: Assets/Materiales/CristalNegro.mat
+  artifactKey: Guid(a36d811960dd466448d5be5f8e353438) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materiales/CristalNegro.mat using Guid(a36d811960dd466448d5be5f8e353438) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8d40ed1551a8ef18f887d0195de362e') in 0.018994 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 85.929862 seconds.
+  path: Assets/3D/3D de gizmos/scaleGizmo/tinker.obj
+  artifactKey: Guid(d5482217b6d6f564e8a672d18a52fe22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3D/3D de gizmos/scaleGizmo/tinker.obj using Guid(d5482217b6d6f564e8a672d18a52fe22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1841cb567a44c0a047b7efa5ac38c982') in 0.035232 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 130.150387 seconds.
+  path: Assets/3D
+  artifactKey: Guid(ead1935021a0d614680b9a1d0c905f93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3D using Guid(ead1935021a0d614680b9a1d0c905f93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5df8f014abe93868e538f2df1c7a7740') in 0.010066 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 109.979256 seconds.
+  path: Assets/Prefabs/Muebles/Sillas/Silla contemporanea.prefab
+  artifactKey: Guid(d8635ab4d887c994b88cfbb0d5fd0e60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Muebles/Sillas/Silla contemporanea.prefab using Guid(d8635ab4d887c994b88cfbb0d5fd0e60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28848de75ed920beeea7403a5acbd2ba') in 0.112251 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Prefabs/Muebles/Sillas/SSilla moderna.prefab
+  artifactKey: Guid(c0ac12fd199bf6344a93533f49a156f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Muebles/Sillas/SSilla moderna.prefab using Guid(c0ac12fd199bf6344a93533f49a156f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2ba636a5a85f28229a0441a9c332101') in 0.034222 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 47.678367 seconds.
+  path: Assets/Prefabs/Muebles/Lamparas/Lampara 1/LamparaMesa.prefab
+  artifactKey: Guid(ebc3f2072db037a41b1055870b7831df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Muebles/Lamparas/Lampara 1/LamparaMesa.prefab using Guid(ebc3f2072db037a41b1055870b7831df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd40a8db8c07b31490e8e289cf7e5d52f') in 0.025056 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 42.796218 seconds.
+  path: Assets/Prefabs/Muebles/Alfombras/AlfombraContemporanea.prefab
+  artifactKey: Guid(146330eddbb3c7144a5f63025c8c6257) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Muebles/Alfombras/AlfombraContemporanea.prefab using Guid(146330eddbb3c7144a5f63025c8c6257) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '773eced44d2fe3e7c0c105a0adf11865') in 0.029837 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Prefabs/Muebles/Alfombras/AlfombraOri.prefab
+  artifactKey: Guid(bc2bda3289d6bd0409d733af21d47b3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Muebles/Alfombras/AlfombraOri.prefab using Guid(bc2bda3289d6bd0409d733af21d47b3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1fb8dd13815cb913390aaa2bdc3de8f') in 0.030456 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 79.462972 seconds.
+  path: Assets/Prefabs/Muebles/Otomana/otomana1.prefab
+  artifactKey: Guid(99102140651469c49b9fed30c96031fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Muebles/Otomana/otomana1.prefab using Guid(99102140651469c49b9fed30c96031fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e1d4e977d15372732168dc96247ec6c') in 0.026983 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Prefabs/Muebles/Otomana/Otomana3.prefab
+  artifactKey: Guid(f7f913e0e9487a94facf00b79c8a6915) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Muebles/Otomana/Otomana3.prefab using Guid(f7f913e0e9487a94facf00b79c8a6915) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6271dbd4d46b164125f0e015a12a6e29') in 0.032701 seconds 
+========================================================================
+Received Prepare
+Assets/3D/3D de objetos/Comodas/Modelo 4/curveddresser.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+Assets/Prefabs/Muebles/Lamparas/Lampara 3/Polyester Masa Lambası-Free3D.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+Registering precompiled user dll's ...
+Registered in 0.005173 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Dell\Documents\GitHub\MIDAS\Proyectos2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Dell\Documents\GitHub\MIDAS\Proyectos2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.23 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.297 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1298ms)
+		BeginReloadAssembly (167ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (47ms)
+		EndReloadAssembly (1031ms)
+			LoadAssemblies (105ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (358ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (64ms)
+			SetupLoadedEditorAssemblies (439ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (91ms)
+				ProcessInitializeOnLoadAttributes (301ms)
+				ProcessInitializeOnLoadMethodAttributes (31ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.85 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3270 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (79.9 KB). Loaded Objects now: 3802.
+Memory consumption went from 120.5 MB to 120.4 MB.
+Total: 7.014200 ms (FindLiveObjects: 0.681100 ms CreateObjectMapping: 0.170500 ms MarkObjects: 5.607100 ms  DeleteObjects: 0.553000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1854.429020 seconds.
+  path: Assets/3D/3D de objetos/Muebles de TV/Mueble oriental/tinker.obj
+  artifactKey: Guid(f1e8960d34d9c9645b33f7e602545ae4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3D/3D de objetos/Muebles de TV/Mueble oriental/tinker.obj using Guid(f1e8960d34d9c9645b33f7e602545ae4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bf809fa7cf9be089b83704b6e733f50') in 0.232478 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/3D/3D de objetos/Alfombras/oriental/tinker.obj
+  artifactKey: Guid(3a93717a6e1b6064e96cdcb303959b38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3D/3D de objetos/Alfombras/oriental/tinker.obj using Guid(3a93717a6e1b6064e96cdcb303959b38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7cbbbe0f2fe8706fbde06349657cf8f') in 0.061641 seconds 
+========================================================================
+Received Prepare
+Assets/3D/3D de objetos/Comodas/Modelo 4/curveddresser.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+Assets/Prefabs/Muebles/Lamparas/Lampara 3/Polyester Masa Lambası-Free3D.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+Registering precompiled user dll's ...
+Registered in 0.007017 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Dell\Documents\GitHub\MIDAS\Proyectos2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Dell\Documents\GitHub\MIDAS\Proyectos2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.77 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.254 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1255ms)
+		BeginReloadAssembly (163ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (49ms)
+		EndReloadAssembly (974ms)
+			LoadAssemblies (103ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (301ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (52ms)
+			SetupLoadedEditorAssemblies (436ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (91ms)
+				ProcessInitializeOnLoadAttributes (297ms)
+				ProcessInitializeOnLoadMethodAttributes (30ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.78 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3270 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (79.8 KB). Loaded Objects now: 3805.
+Memory consumption went from 120.6 MB to 120.5 MB.
+Total: 4.118700 ms (FindLiveObjects: 0.338400 ms CreateObjectMapping: 0.108600 ms MarkObjects: 3.390300 ms  DeleteObjects: 0.280100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

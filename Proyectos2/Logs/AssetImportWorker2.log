@@ -1,0 +1,323 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.23f1 (213b516bf396) revision 2177873'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22000) 64bit Professional' Language: 'es' Physical Memory: 15741 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.23f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+C:/Users/Dell/Documents/GitHub/MIDAS/Proyectos2
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+61288
+Successfully changed project path to: C:/Users/Dell/Documents/GitHub/MIDAS/Proyectos2
+C:/Users/Dell/Documents/GitHub/MIDAS/Proyectos2
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [13144] Host "[IP] 192.168.80.1 [Port] 0 [Flags] 2 [Guid] 753053194 [EditorId] 753053194 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-KL0MDJR) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [13144] Host "[IP] 192.168.80.1 [Port] 0 [Flags] 2 [Guid] 753053194 [EditorId] 753053194 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-KL0MDJR) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Assets/3D/3D de objetos/Comodas/Modelo 4/curveddresser.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+Assets/Prefabs/Muebles/Lamparas/Lampara 3/Polyester Masa Lambası-Free3D.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+Refreshing native plugins compatible for Editor in 278.92 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.23f1 (213b516bf396)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.23f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Dell/Documents/GitHub/MIDAS/Proyectos2/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon(TM) Graphics (ID=0x1636)
+    Vendor:   ATI
+    VRAM:     7870 MB
+    Driver:   31.0.12019.15004
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.23f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.23f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.23f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56384
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.23f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006592 seconds.
+Native extension for WindowsStandalone target not found
+Assets/3D/3D de objetos/Comodas/Modelo 4/curveddresser.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+Assets/Prefabs/Muebles/Lamparas/Lampara 3/Polyester Masa Lambası-Free3D.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+Refreshing native plugins compatible for Editor in 177.44 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.152 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1153ms)
+		BeginReloadAssembly (140ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (859ms)
+			LoadAssemblies (137ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (189ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (519ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (178ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (232ms)
+				ProcessInitializeOnLoadMethodAttributes (95ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.011421 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Dell\Documents\GitHub\MIDAS\Proyectos2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Dell\Documents\GitHub\MIDAS\Proyectos2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.956 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1957ms)
+		BeginReloadAssembly (187ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (28ms)
+		EndReloadAssembly (1586ms)
+			LoadAssemblies (161ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (622ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (122ms)
+			SetupLoadedEditorAssemblies (621ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (176ms)
+				ProcessInitializeOnLoadAttributes (386ms)
+				ProcessInitializeOnLoadMethodAttributes (40ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Assets/3D/3D de objetos/Comodas/Modelo 4/curveddresser.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+Assets/Prefabs/Muebles/Lamparas/Lampara 3/Polyester Masa Lambası-Free3D.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+========================================================================
+Worker process is ready to serve import requests
+Assets/3D/3D de objetos/Comodas/Modelo 4/curveddresser.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+Assets/Prefabs/Muebles/Lamparas/Lampara 3/Polyester Masa Lambası-Free3D.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 0.87 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3295 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (113.5 KB). Loaded Objects now: 3755.
+Memory consumption went from 117.6 MB to 117.5 MB.
+Total: 4.999000 ms (FindLiveObjects: 0.536100 ms CreateObjectMapping: 0.272700 ms MarkObjects: 3.902600 ms  DeleteObjects: 0.285100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 20492.458789 seconds.
+  path: Assets/Imágenes/Materials
+  artifactKey: Guid(525d66ea06775274cba1ad2d78b8cf66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imágenes/Materials using Guid(525d66ea06775274cba1ad2d78b8cf66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2ae42a6e9a3663699d7e77f6623ea7f') in 0.024173 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.021750 seconds.
+  path: Assets/Imágenes/Materials/9a35d6b50aaea74a80052640850d86d3.mat
+  artifactKey: Guid(0ece26e9838c87d459a8a68af3c382f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imágenes/Materials/9a35d6b50aaea74a80052640850d86d3.mat using Guid(0ece26e9838c87d459a8a68af3c382f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f8b2b6e1870ed4f6c920b09eb1f5087') in 0.194614 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.860925 seconds.
+  path: Assets/Imágenes
+  artifactKey: Guid(b6d0d440a49bb8640b59f2a083a1b886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imágenes using Guid(b6d0d440a49bb8640b59f2a083a1b886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c91da10e848b2714fd40ed41fef71d3') in 0.013999 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 111.336428 seconds.
+  path: Assets/Imágenes/22-223545_pared-con-figuras-geometricas.jpg
+  artifactKey: Guid(5e113d44f374b83499fd52c82037be28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imágenes/22-223545_pared-con-figuras-geometricas.jpg using Guid(5e113d44f374b83499fd52c82037be28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2371cfd3d7ab73d8b6866896d346b84d') in 0.055072 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 88.445375 seconds.
+  path: Assets/Materiales/MatSuelo/Suelo
+  artifactKey: Guid(e774b497bfa69a346a64cf7258d8f253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materiales/MatSuelo/Suelo using Guid(e774b497bfa69a346a64cf7258d8f253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b8174de7f2fb396b0e84448a944a27a') in 0.011976 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 37.035621 seconds.
+  path: Assets/Materiales/MatSuelo/Suelo/narrow-floorboards1-albedo.png
+  artifactKey: Guid(df7dbae82f568a446989e189807f3ee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materiales/MatSuelo/Suelo/narrow-floorboards1-albedo.png using Guid(df7dbae82f568a446989e189807f3ee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '386acfc8adf600ec824a7658fecbe910') in 0.076157 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000081 seconds.
+  path: Assets/Materiales/MatSuelo/Suelo/narrow-floorboards1-metallic.png
+  artifactKey: Guid(3b6f784f2e6933a4daf60960622bac55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materiales/MatSuelo/Suelo/narrow-floorboards1-metallic.png using Guid(3b6f784f2e6933a4daf60960622bac55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb0200ebec8d86311707bbb9e430983f') in 0.038051 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000083 seconds.
+  path: Assets/Materiales/MatSuelo/Suelo/narrow-floorboards1-normal-dx.png
+  artifactKey: Guid(014fae4f1ad63a54b9fd87a164cae0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materiales/MatSuelo/Suelo/narrow-floorboards1-normal-dx.png using Guid(014fae4f1ad63a54b9fd87a164cae0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8365ae104483223aef81ff48a62b0a47') in 0.043771 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 197.607330 seconds.
+  path: Assets/Materiales/MatSuelo/Suelo/Materials
+  artifactKey: Guid(37a7580c0b6187c429fedb852b829b9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materiales/MatSuelo/Suelo/Materials using Guid(37a7580c0b6187c429fedb852b829b9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c26c0a4656449b7c28d4efd405eca0f4') in 0.004147 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.036949 seconds.
+  path: Assets/Materiales/MatSuelo/Suelo/Materials/narrow-floorboards1-albedo.mat
+  artifactKey: Guid(3993c94f6559c06419942730619da901) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materiales/MatSuelo/Suelo/Materials/narrow-floorboards1-albedo.mat using Guid(3993c94f6559c06419942730619da901) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd15675f79a5b6e370e893f87d2e391cc') in 0.029623 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Materiales/MatSuelo/Suelo/Materials/narrow-floorboards1-roughness.mat
+  artifactKey: Guid(8bbe9b00d91d5074bae931900fd6b164) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materiales/MatSuelo/Suelo/Materials/narrow-floorboards1-roughness.mat using Guid(8bbe9b00d91d5074bae931900fd6b164) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c5d3c445cf155cb96a5a752c04f593e') in 0.031580 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 891.070159 seconds.
+  path: Assets/Prefabs/Imagen 1.prefab
+  artifactKey: Guid(d910e013c72cab24092a4463f65a7cfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Imagen 1.prefab using Guid(d910e013c72cab24092a4463f65a7cfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0cd8a687a57c8cc04242972ac36dd26') in 0.030045 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Prefabs/prueba1.prefab
+  artifactKey: Guid(4d60be0e14451424ab92c10e86d8c92f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/prueba1.prefab using Guid(4d60be0e14451424ab92c10e86d8c92f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45fce92de708016fd95417faee997ccf') in 0.034360 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.107601 seconds.
+  path: Assets/Prefabs/Muebles/Cube.048.prefab
+  artifactKey: Guid(7c3832c6d1dd864478df04a87d040dad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Muebles/Cube.048.prefab using Guid(7c3832c6d1dd864478df04a87d040dad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3076d137d7449ad9b975fae06b2d2c84') in 0.028900 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.331676 seconds.
+  path: Assets/Prefabs/Muebles/Camas/Cama oriental.prefab
+  artifactKey: Guid(670bed616e1222141aef1521775d4670) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Muebles/Camas/Cama oriental.prefab using Guid(670bed616e1222141aef1521775d4670) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33cfcca2f0ffaeaae610cd317906c4c0') in 0.120986 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Prefabs/Muebles/Camas/CamaModerna.prefab
+  artifactKey: Guid(5729dc3b8fced7243b0f902d44ab8161) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Muebles/Camas/CamaModerna.prefab using Guid(5729dc3b8fced7243b0f902d44ab8161) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5def04f8df473c647862ebb82fae509b') in 0.035622 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 55.868673 seconds.
+  path: Assets/Prefabs/Muebles/Comodas/Comoda 2.prefab
+  artifactKey: Guid(8b8c121d640c5944d8d61a0358385387) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Muebles/Comodas/Comoda 2.prefab using Guid(8b8c121d640c5944d8d61a0358385387) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1aa7efca21749d49e95bcb72eab3572') in 0.030378 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Prefabs/Muebles/Comodas/Comoda.prefab
+  artifactKey: Guid(081cf1d079622094ba1bd34c30fbbfc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Muebles/Comodas/Comoda.prefab using Guid(081cf1d079622094ba1bd34c30fbbfc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cea867f733d17c15817594ddb5edb763') in 0.084732 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 179.183168 seconds.
+  path: Assets/Prefabs/Muebles/Cuadros/CuadroCont.prefab
+  artifactKey: Guid(ed78f559d2dde2249841714127c479a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Muebles/Cuadros/CuadroCont.prefab using Guid(ed78f559d2dde2249841714127c479a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc5d32e6b26083f2bcc7a99de53dcc85') in 0.045454 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Prefabs/Muebles/Cuadros/CuadroOri.prefab
+  artifactKey: Guid(c77b36e9c6a7d434daa68b6a218a06ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Muebles/Cuadros/CuadroOri.prefab using Guid(c77b36e9c6a7d434daa68b6a218a06ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b671e3bd9698fcf39ba9324a09277e76') in 0.043528 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.741836 seconds.
+  path: Assets/Prefabs/Muebles/Escritorios/Escritorio1.prefab
+  artifactKey: Guid(fbe9ed0b448d94c4288c9dcdf230b878) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Muebles/Escritorios/Escritorio1.prefab using Guid(fbe9ed0b448d94c4288c9dcdf230b878) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d808b343f867666f28c4ca045e5fb71') in 0.043235 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Prefabs/Muebles/Escritorios/Escritorio4.prefab
+  artifactKey: Guid(88d4c7c31e119de4389ed6c95a511b6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Muebles/Escritorios/Escritorio4.prefab using Guid(88d4c7c31e119de4389ed6c95a511b6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c078d77abc747a9e6bc428fd0c4c60e1') in 0.046849 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

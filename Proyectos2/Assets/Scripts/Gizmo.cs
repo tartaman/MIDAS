@@ -61,17 +61,12 @@ public class Gizmo : MonoBehaviour
     {
         puedeArrastrar = true;
         selectedIndex = -1;
-        piso = GameObject.FindGameObjectWithTag("suelo").GetComponent<MeshCollider>();
+        piso = GameObject.FindGameObjectWithTag("suelo").GetComponent<BoxCollider>();
         objetos = MergeSort(objetos);
         CambioBotones(1);
         manual = GetComponent<ButtonUI>();
         ColorPickerController = ColorPalette.GetComponent<ColorPickerController>();
     }
-    void Start()
-    {
-       
-    }
-
 
     
     void LateUpdate()
