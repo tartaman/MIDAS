@@ -31,38 +31,54 @@ public class ButtonUI : MonoBehaviour
     {
         if(helper.GetActivo().gameObject.name != "Helper")
         {
-            menu.transform.Find("Scroll").gameObject.SetActive(false);
-            if (mode != "color")
+            if(mode == "eliminar")
             {
-                menu.transform.Find("ChangeValues").gameObject.SetActive(true);
+                this.mode = "mover";
+                GameObject objetoADestruir = helper.GetActivo();
+                helper.SetActivo(helper.gameObject);
+                Destroy(objetoADestruir);
+                menu.transform.Find("ChangeValues").gameObject.SetActive(false);
                 menu.transform.Find("ColorShowCase").gameObject.SetActive(false);
-                this.mode = mode;
-                if (mode == "mover")
-                {
-                    menu.transform.Find("ChangeValues/Texto").GetComponent<Text>().text = "Mover";
-                    menu.transform.Find("ChangeValues/X").GetComponent<Text>().text = "Posición en X";
-                    menu.transform.Find("ChangeValues/Y").GetComponent<Text>().text = "Posición en Y";
-                    menu.transform.Find("ChangeValues/Z").GetComponent<Text>().text = "Posición en Z";
-                    Vector3 objeto = GetComponent<Gizmo>().GetActivo().transform.position;
-                    ChangeValues(objeto);
-                }
-                else if(mode == "rotar")
-                {
-                    menu.transform.Find("ChangeValues/Texto").GetComponent<Text>().text = "Rotar";
-                    menu.transform.Find("ChangeValues/X").GetComponent<Text>().text = "Rotación en X";
-                    menu.transform.Find("ChangeValues/Y").GetComponent<Text>().text = "Rotación en Y";
-                    menu.transform.Find("ChangeValues/Z").GetComponent<Text>().text = "Rotación en Z";
-                    Vector3 objeto = GetComponent<Gizmo>().GetActivo().transform.localEulerAngles;
-                    ChangeValues(objeto);
-                }
+                menu.transform.Find("Scroll").gameObject.SetActive(true);
+                
             }
             else
             {
-                menu.transform.Find("ColorShowCase").gameObject.SetActive(true);
-                menu.transform.Find("ChangeValues").gameObject.SetActive(false);
-                this.mode = mode;
-                helper.GetMeshes();
+                menu.transform.Find("Scroll").gameObject.SetActive(false);
+                if (mode != "color")
+                {
+                    menu.transform.Find("ChangeValues").gameObject.SetActive(true);
+                    menu.transform.Find("ColorShowCase").gameObject.SetActive(false);
+                    this.mode = mode;
+                    if (mode == "mover")
+                    {
+                        menu.transform.Find("ChangeValues/Texto").GetComponent<Text>().text = "Mover";
+                        menu.transform.Find("ChangeValues/X").GetComponent<Text>().text = "Posición en X";
+                        menu.transform.Find("ChangeValues/Y").GetComponent<Text>().text = "Posición en Y";
+                        menu.transform.Find("ChangeValues/Z").GetComponent<Text>().text = "Posición en Z";
+                        Vector3 objeto = GetComponent<Gizmo>().GetActivo().transform.position;
+                        ChangeValues(objeto);
+                    }
+                    else if (mode == "rotar")
+                    {
+                        menu.transform.Find("ChangeValues/Texto").GetComponent<Text>().text = "Rotar";
+                        menu.transform.Find("ChangeValues/X").GetComponent<Text>().text = "Rotación en X";
+                        menu.transform.Find("ChangeValues/Y").GetComponent<Text>().text = "Rotación en Y";
+                        menu.transform.Find("ChangeValues/Z").GetComponent<Text>().text = "Rotación en Z";
+                        Vector3 objeto = GetComponent<Gizmo>().GetActivo().transform.localEulerAngles;
+                        ChangeValues(objeto);
+                    }
+                }
+                else
+                {
+                    menu.transform.Find("ColorShowCase").gameObject.SetActive(true);
+                    menu.transform.Find("ChangeValues").gameObject.SetActive(false);
+                    this.mode = mode;
+                    helper.GetMeshes();
+                }
             }
+          
+            
         }
         else
         {
