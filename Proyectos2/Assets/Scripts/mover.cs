@@ -70,7 +70,7 @@ public class mover : MonoBehaviour
                     Debug.Log("1");
                     gizmo.transform.Translate(Vector3.forward * mouseY * Time.deltaTime * 3);
                 }
-                Debug.Log(Camera.main.transform.rotation.eulerAngles.y);
+                
                 break;
             case 'y':
                 gizmo.transform.Translate(Vector3.up * mouseY * Time.deltaTime * 3);

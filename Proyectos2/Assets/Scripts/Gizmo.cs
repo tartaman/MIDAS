@@ -314,7 +314,7 @@ public class Gizmo : MonoBehaviour
                 }
                 else if (seleccionado.GetComponent<Collider>() != null)
                 {
-                    distance = seleccionado.GetComponent<Collider>().bounds.center.y - seleccionado.GetComponent<Collider>().bounds.min.y;
+                    distance = seleccionado.GetComponent<Collider>().bounds.center.y - seleccionado.GetComponent<Collider>().bounds.min.y + 0.1f;
 
                 }
                 lastpos = new Vector3(hit.point.x, distance, hit.point.z);
