@@ -20,7 +20,7 @@ public class BotonEvent : MonoBehaviour
     }
 
 
-    //Es una mausque herramienta que nos ayudará más tarde
+    //Es una herramienta que nos ayudarï¿½ mï¿½s tarde
     public void setIndex(int index)
     {
         this.index = index;

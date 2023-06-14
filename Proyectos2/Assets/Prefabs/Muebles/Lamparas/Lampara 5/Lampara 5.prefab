@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb29d6b232864f6419881e614a45d4d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preview: {fileID: 0}
+  preview: {fileID: 1997121358, guid: 677caee7539e0544b833f96972d1ae95, type: 3}
   grupo: 6
 --- !u!65 &3237359127636081248
 BoxCollider:
